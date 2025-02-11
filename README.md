@@ -18,6 +18,7 @@
   - [src/pages/posts/post-1.md](#srcpagespostspost-1md)
   - [src/pages/posts/post-2.md](#srcpagespostspost-2md)
   - [src/pages/posts/post-3.md](#srcpagespostspost-3md)
+  - [src/styles/global.css](#srcstylesglobalcss)
 
 # setting
 
@@ -92,6 +93,8 @@
       - post-1.md
       - post-2.md
       - post-3.md
+  - /styles
+    - global.css
 
 ## src/pages/index.astro
 
@@ -116,3 +119,7 @@
 ## src/pages/posts/post-3.md
 
 - [url](http://localhost:4321/posts/post-3)
+
+## src/styles/global.css
+
+- サイト全体に適用させる
