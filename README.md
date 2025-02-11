@@ -1,48 +1,46 @@
-# Astro Starter Kit: Basics
+# git
 
-```sh
-npm create astro@latest -- --template basics
-```
+- git 初期設定
+  <!-- yusuke.shigeta@MacBook dev-astro % git config --global user.email "x.shigeta.x@gmail.com" -->
+  <!-- yusuke.shigeta@MacBook dev-astro %   git config --global user.name "yusuke-shigeta" -->
+- git clone
+  `git clone https://github.com/yusuke-shigeta/dev-astro.git`
+- merge 方式
+  `git config pull.rebase false`
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+# 拡張機能
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- Astro
+- Git Graph
+- GitHub Theme
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+# url
 
-## 🚀 Project Structure
+- [main](https://yusuke-shigeta.com/)
 
-Inside of your Astro project, you'll see the following folders and files:
+# mac 設定
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- [ライブ変換を OFF](https://easytouse.jp/2018/01/23/mac-liveconversion-off/)
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+# node.js をインストール
 
-## 🧞 Commands
+- バージョン: `v18.14.1` 以降
+- [nodejs 公式からダウンロード](https://nodejs.org/ja)
+  ```
+  This package will install:
+    •Node.js v22.13.1 to /usr/local/bin/node
+    •npm v10.9.2 to /usr/local/bin/npm
+  ```
+- インストールしたバージョン: `v22.13.1`
 
-All commands are run from the root of the project, from a terminal:
+# ファイルジラ手順
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- [xserver との繋げ方](https://www.xserver.ne.jp/manual/man_ftp_filezilla_setting.php)
 
-## 👀 Want to learn more?
+# shortcut
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- source control を開く
+
+# astro 環境構築
+
+- [基本的に tutorial 通り](https://docs.astro.build/ja/tutorial/1-setup/1/)
