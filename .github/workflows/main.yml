@@ -18,5 +18,5 @@ jobs:
           server: ${{ secrets.PROD_SERVER }}
           username: ${{ secrets.PROD_USERNAME }}
           password: ${{ secrets.PROD_PASSWORD }}
-          local-dir: /dist
+          local-dir: ./dist
           server-dir: /yusuke-shigeta.com/public_html/
