@@ -17,6 +17,7 @@
 # url
 
 - [main](https://yusuke-shigeta.com/)
+- [dev](http://localhost:4321/)
 
 # mac 設定
 
@@ -44,3 +45,8 @@
 # astro 環境構築
 
 - [基本的に tutorial 通り](https://docs.astro.build/ja/tutorial/1-setup/1/)
+
+# npm コマンド
+
+- `npm run dev`
+  dev サーバーを起動する
