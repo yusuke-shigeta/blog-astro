@@ -15,6 +15,9 @@
   - [src/pages/index.astro](#srcpagesindexastro)
   - [src/pages/about.astro](#srcpagesaboutastro)
   - [src/pages/blog.astro](#srcpagesblogastro)
+  - [src/pages/posts/post-1.md](#srcpagespostspost-1md)
+  - [src/pages/posts/post-2.md](#srcpagespostspost-2md)
+  - [src/pages/posts/post-3.md](#srcpagespostspost-3md)
 
 # setting
 
@@ -80,11 +83,15 @@
 
 # file
 
-- src
-  - pages
+- /src
+  - /pages
     - index.astro
     - about.astro
     - blog.astro
+    - /posts
+      - post-1.md
+      - post-2.md
+      - post-3.md
 
 ## src/pages/index.astro
 
@@ -97,3 +104,15 @@
 ## src/pages/blog.astro
 
 - [url](http://localhost:4321/blog)
+
+## src/pages/posts/post-1.md
+
+- [url](http://localhost:4321/posts/post-1)
+
+## src/pages/posts/post-2.md
+
+- [url](http://localhost:4321/posts/post-2)
+
+## src/pages/posts/post-3.md
+
+- [url](http://localhost:4321/posts/post-3)

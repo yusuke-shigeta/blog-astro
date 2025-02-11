@@ -1,5 +1,18 @@
 ---
+const pageTitle = "ABOUT";
 
+const identity = {
+  firstName: "Yusuke",
+  country: "Japan",
+  occupation: "Web技術者",
+  hobbies: ["ゴルフ", "サウナ", "ラーメン"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "PHP", "Astro", "figma"];
+
+const happy = true;
+const finished = true;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -8,17 +21,46 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>ABOUT</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">TOP</a>
-    <a href="/about/">ABOUT</a>
-    <a href="/blog/">BLOG</a>
-    <h1>ABOUTページ</h1>
+    <nav>
+      <ul>
+        <li><a href="/">TOP</a></li>
+        <li><a href="/about/">ABOUT</a></li>
+        <li><a href="/blog/">BLOG</a></li>
+      </ul>
+    </nav>
+    <h1>{pageTitle}</h1>
     <h2>head2</h2>
     <h2>head3</h2>
     <h2>head4</h2>
     <p>テキストテキストテキストテキストテキスト</p>
     <p>テキストテキストテキストテキストテキスト</p>
+    <ul>
+      <li>名前: {identity.firstName}</li>
+      <li>国: {identity.country}</li>
+      <li>職業: {identity.occupation}</li>
+      {
+        identity.hobbies.length >= 2 && (
+          <li>
+            趣味: {identity.hobbies[0]}, {identity.hobbies[1]}
+          </li>
+        )
+      }
+      <li>
+        スキル:
+        <ul>
+          {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+      </li>
+    </ul>
+
+    {
+      // 条件に応じて要素をレンダリング
+    }
+    {happy && <p>happyをレンダリング</p>}
+    {finished && <p>finishedをレンダリング</p>}
+    {goal === 3 && <p>goalをレンダリング</p>}
   </body>
 </html>
