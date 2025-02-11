@@ -9,7 +9,7 @@ image:
 tags: ['astro', 'study']
 ---
 # メモ
-- 勝手にhtmlに変換される仕様っぽい
+- **勝手にhtmlに変換される仕様っぽい**
 - `---`で囲われているのはフロントマターとかいう
 
 ## astroでできること
@@ -17,8 +17,11 @@ tags: ['astro', 'study']
 - mdファイルが自動でhtmlに変換されるっぽい
 - jsの式がかける
   - フロントマターにはjsのみ
+    - フロントマターscriptとかいう
 - htmlの構文が間違えてたらエラーになる場合があるっぽい
 - 条件に応じて要素をレンダリングできる
+- `define:vars={ {...} }`ディレクティブ
+  - 使い所ありそ
 
 ## typescript
 - {条件} && ()
@@ -26,3 +29,10 @@ tags: ['astro', 'study']
 - objectと配列は違う
   - object, `{`{オブジェクト名}`.`{キー}`}`
   - 配列, mapを使用
+
+## JSXとは
+- [参考記事](https://typescriptbook.jp/reference/jsx)
+- 特にReactで採用されているらしい
+- JavaScriptのコードの中にHTMLタグのような構文が埋め込みできるやつ
+- HTMLとの違い
+  - 属性の書き方とか...

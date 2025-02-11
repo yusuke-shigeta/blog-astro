@@ -1,18 +1,29 @@
 ---
+// pageInfo:
 const pageTitle = "ABOUT";
+// pageInfo;
 
+// profile:
 const identity = {
   firstName: "Yusuke",
   country: "Japan",
   occupation: "Web技術者",
   hobbies: ["ゴルフ", "サウナ", "ラーメン"],
 };
-
 const skills = ["HTML", "CSS", "JavaScript", "PHP", "Astro", "figma"];
+// profile;
 
+// style:
+const skillColor = "navy";
+const fontWeight = "bold";
+const textCase = "uppercase";
+// style;
+
+// 動作確認:
 const happy = true;
 const finished = true;
 const goal = 3;
+// 動作確認;
 ---
 
 <html lang="en">
@@ -22,6 +33,17 @@ const goal = 3;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <style define:vars={{ skillColor, fontWeight, textCase }}>
+      h1 {
+        color: blue;
+        font-size: 2rem;
+      }
+      .skill {
+        color: var(--skillColor);
+        font-weight: var(--fontWeight);
+        text-transform: var(--textCase);
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -51,7 +73,7 @@ const goal = 3;
       <li>
         スキル:
         <ul>
-          {skills.map((skill) => <li>{skill}</li>)}
+          {skills.map((skill) => <li class="skill">{skill}</li>)}
         </ul>
       </li>
     </ul>
