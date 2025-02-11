@@ -50,3 +50,5 @@
 
 - `npm run dev`
   dev サーバーを起動する
+- `npm run build`
+  本番用にプロジェクトをビルドする
