@@ -25,6 +25,10 @@ tags: ['astro', 'study']
 - コンポーネント, Astroコンポーネント
 - [Astro.props 参考](https://docs.astro.build/ja/basics/astro-components/)
   - props = 小道具
+- カスタムレイアウト
+  - slotはlayoutファイル
+  - ページファイルではlayoutタグを仕様
+  - レイアウトでもpropsを使用可能
 
 ## typescript
 - {条件} && ()

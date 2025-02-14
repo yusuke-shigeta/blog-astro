@@ -9,6 +9,7 @@
   - [ファイルジラ手順](#ファイルジラ手順)
   - [shortcut](#shortcut)
   - [astro 環境構築](#astro-環境構築)
+  - [Chrome拡張機能](#chrome拡張機能)
 - [url](#url)
 - [npm コマンド](#npm-コマンド)
 - [file](#file)
@@ -25,6 +26,7 @@
   - [src/components/Header.astro](#srccomponentsheaderastro)
   - [src/components/Hamburger.astro](#srccomponentshamburgerastro)
   - [src/script/menu.js](#srcscriptmenujs)
+  - [src/layouts/BaseLayout.astro](#srclayoutsbaselayoutastro)
 
 # setting
 
@@ -78,6 +80,11 @@
 
 - [基本的に tutorial 通り](https://docs.astro.build/ja/tutorial/1-setup/1/)
 
+## Chrome拡張機能
+
+- Acid Tabs
+  - タブをグループ化
+
 # url
 
 - [main](https://yusuke-shigeta.com/)
@@ -111,11 +118,14 @@
     - Hamburger.astro
   - /script
     - menu.js
+  - /layouts
+    - BaseLayout.astro
 
 ## src/pages/index.astro
 
 - [url](http://localhost:4321/)
 - topページ
+- layout: BaseLayout
 
 ## src/pages/about.astro
 
@@ -178,6 +188,15 @@
 
 ## src/components/Hamburger.astro
 
+- ヘッダーハンバーガーメニュー
+- mobile表示時のみ表示
+
 ## src/script/menu.js
 
 - Hamburgerメニューのscript
+- importしているページ
+  - top
+  - about
+  - blog
+
+## src/layouts/BaseLayout.astro
