@@ -19,6 +19,7 @@
   - [src/pages/posts/post-2.md](#srcpagespostspost-2md)
   - [src/pages/posts/post-3.md](#srcpagespostspost-3md)
   - [src/styles/global.css](#srcstylesglobalcss)
+  - [src/components/Navigation.astro](#srccomponentsnavigationastro)
 
 # setting
 
@@ -95,18 +96,23 @@
       - post-3.md
   - /styles
     - global.css
+  - /components
+    - Navigation.astro
 
 ## src/pages/index.astro
 
 - [url](http://localhost:4321/)
+- topページ
 
 ## src/pages/about.astro
 
 - [url](http://localhost:4321/about)
+- aboutページ
 
 ## src/pages/blog.astro
 
 - [url](http://localhost:4321/blog)
+- blogページ
 
 ## src/pages/posts/post-1.md
 
@@ -123,3 +129,11 @@
 ## src/styles/global.css
 
 - サイト全体に適用させる
+
+## src/components/Navigation.astro
+
+- ヘッダのナビゲーション部分
+- importしているページ
+  - top
+  - about
+  - blog
