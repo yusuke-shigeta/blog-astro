@@ -20,6 +20,8 @@
   - [src/pages/posts/post-3.md](#srcpagespostspost-3md)
   - [src/styles/global.css](#srcstylesglobalcss)
   - [src/components/Navigation.astro](#srccomponentsnavigationastro)
+  - [src/components/Footer.astro](#srccomponentsfooterastro)
+  - [src/components/Social.astro](#srccomponentssocialastro)
 
 # setting
 
@@ -98,6 +100,8 @@
     - global.css
   - /components
     - Navigation.astro
+    - Footer.astro
+    - Social.astro
 
 ## src/pages/index.astro
 
@@ -137,3 +141,20 @@
   - top
   - about
   - blog
+
+## src/components/Footer.astro
+
+- 共通フッター
+- importしているページ
+  - top
+  - about
+  - blog
+
+## src/components/Social.astro
+
+- ソーシャルメディアのリスト
+- importしているコンポーネント
+  - Footer.astro
+- props:
+  - platform
+  - username

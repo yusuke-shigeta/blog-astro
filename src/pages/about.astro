@@ -1,7 +1,7 @@
 ---
 // import:
-import "../components/Navigation.astro";
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 // import;
 
@@ -85,5 +85,6 @@ const goal = 3;
     {happy && <p>happyをレンダリング</p>}
     {finished && <p>finishedをレンダリング</p>}
     {goal === 3 && <p>goalをレンダリング</p>}
+    <Footer />
   </body>
 </html>

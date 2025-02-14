@@ -23,6 +23,8 @@ tags: ['astro', 'study']
 - `define:vars={ {...} }`ディレクティブ
   - 使い所ありそ
 - コンポーネント, Astroコンポーネント
+- [Astro.props 参考](https://docs.astro.build/ja/basics/astro-components/)
+  - props = 小道具
 
 ## typescript
 - {条件} && ()
