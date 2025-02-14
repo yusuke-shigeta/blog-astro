@@ -22,6 +22,7 @@
   - [src/components/Navigation.astro](#srccomponentsnavigationastro)
   - [src/components/Footer.astro](#srccomponentsfooterastro)
   - [src/components/Social.astro](#srccomponentssocialastro)
+  - [src/components/Header.astro](#srccomponentsheaderastro)
 
 # setting
 
@@ -102,6 +103,7 @@
     - Navigation.astro
     - Footer.astro
     - Social.astro
+    - Header.astro
 
 ## src/pages/index.astro
 
@@ -158,3 +160,11 @@
 - props:
   - platform
   - username
+
+## src/components/Header.astro
+
+- 共通ヘッダー
+- importしているページ
+  - top
+  - about
+  - blog
