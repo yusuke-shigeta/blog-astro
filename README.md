@@ -27,6 +27,7 @@
   - [src/components/Hamburger.astro](#srccomponentshamburgerastro)
   - [src/script/menu.js](#srcscriptmenujs)
   - [src/layouts/BaseLayout.astro](#srclayoutsbaselayoutastro)
+  - [src/layouts/MarkdownPostLayout.astro](#srclayoutsmarkdownpostlayoutastro)
 
 # setting
 
@@ -120,6 +121,7 @@
     - menu.js
   - /layouts
     - BaseLayout.astro
+    - MarkdownPostLayout.astro
 
 ## src/pages/index.astro
 
@@ -131,11 +133,13 @@
 
 - [url](http://localhost:4321/about)
 - aboutページ
+- layout: BaseLayout
 
 ## src/pages/blog.astro
 
 - [url](http://localhost:4321/blog)
 - blogページ
+- layout: BaseLayout
 
 ## src/pages/posts/post-1.md
 
@@ -200,3 +204,17 @@
   - blog
 
 ## src/layouts/BaseLayout.astro
+
+- 使用しているページ
+  - top
+  - about
+  - blog
+- props
+  - pageTitle
+  - mainColor
+
+## src/layouts/MarkdownPostLayout.astro
+
+- 使用しているページ
+  - 記事ページ
+- props

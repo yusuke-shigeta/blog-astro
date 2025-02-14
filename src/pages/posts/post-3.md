@@ -1,5 +1,6 @@
 ---
-title: '1投稿目'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: '構想'
 pubDate: 2025-02-11
 description: 'astroの3投稿目'
 author: 'Yusuke Shigeta'

@@ -1,5 +1,6 @@
 ---
-title: '1投稿目'
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'astro関連メモ'
 pubDate: 2025-02-11
 description: 'astroの1投稿目'
 author: 'Yusuke Shigeta'
@@ -7,6 +8,7 @@ image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'Astroのロゴ。'
 tags: ['astro', 'study']
+test: "frontmatter追加テスト"
 ---
 # メモ
 - **勝手にhtmlに変換される仕様っぽい**
@@ -29,6 +31,9 @@ tags: ['astro', 'study']
   - slotはlayoutファイル
   - ページファイルではlayoutタグを仕様
   - レイアウトでもpropsを使用可能
+- Markdownのフロントマターでつくったやつ、`frontmatter`として配列になるらしい
+  - frontmatter自由自在やん
+  - tagsとかは連想配列か？
 
 ## typescript
 - {条件} && ()

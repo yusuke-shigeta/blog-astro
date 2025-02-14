@@ -13,15 +13,6 @@ const { pageTitle, mainColor } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
-    <style define:vars={{ mainColor }}>
-      h1 {
-        color: var(--mainColor);
-        font-size: 2rem;
-      }
-      .skill {
-        color: #000;
-      }
-    </style>
   </head>
   <body>
     <Header />
@@ -33,3 +24,13 @@ const { pageTitle, mainColor } = Astro.props;
     </script>
   </body>
 </html>
+
+<style define:vars={{ mainColor }}>
+  h1 {
+    color: var(--mainColor);
+    font-size: 2rem;
+  }
+  .skill {
+    color: #000;
+  }
+</style>
