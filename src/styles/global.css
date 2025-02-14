@@ -1,3 +1,7 @@
+/* reset: */
+/* reset; */
+
+/* default: */
 html {
   background-color: #f1f5f9;
   font-family: sans-serif;
@@ -19,6 +23,7 @@ h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
 }
+/* default; */
 
 /* Navigation: */
 .nav-links {
@@ -62,6 +67,26 @@ h1 {
     display: inline-block;
     padding: 15px 20px;
   }
-
 }
 /* Navigation; */
+
+/* Hamburger: */
+.hamburger {
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 5px;
+  margin-bottom: 10px;
+  background-color: #ff9776;
+}
+
+@media screen and (min-width: 636px) {
+  .hamburger {
+    display: none;
+  }
+}
+/* Hamburger; */

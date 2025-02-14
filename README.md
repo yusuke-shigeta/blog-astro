@@ -23,6 +23,8 @@
   - [src/components/Footer.astro](#srccomponentsfooterastro)
   - [src/components/Social.astro](#srccomponentssocialastro)
   - [src/components/Header.astro](#srccomponentsheaderastro)
+  - [src/components/Hamburger.astro](#srccomponentshamburgerastro)
+  - [src/script/menu.js](#srcscriptmenujs)
 
 # setting
 
@@ -69,6 +71,8 @@
 ## shortcut
 
 - source control を開く
+- Close AI Sidebar
+  `shift command B`
 
 ## astro 環境構築
 
@@ -104,6 +108,9 @@
     - Footer.astro
     - Social.astro
     - Header.astro
+    - Hamburger.astro
+  - /script
+    - menu.js
 
 ## src/pages/index.astro
 
@@ -168,3 +175,9 @@
   - top
   - about
   - blog
+
+## src/components/Hamburger.astro
+
+## src/script/menu.js
+
+- Hamburgerメニューのscript
