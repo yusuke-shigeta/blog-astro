@@ -80,3 +80,6 @@ const mainColor = "red";
   <pre>{JSON.stringify(allPosts, null, 2)}</pre>
 </BaseLayout>
 ```
+
+- renderを使用し、Contentと共に記事のheadingリストを取得する
+- 目次をうまい具合に出力する

@@ -1,0 +1,51 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  const blogs = await getCollection("blog");
+  return blogs.map((blog) => ({
+    params: { slug: blog.slug },
+    props: { blog },
+  }));
+}
+
+const { blog } = Astro.props;
+const { Content, headings } = await blog.render();
+
+const filteredHeadings = headings.filter((heading) => heading.depth <= 4);
+const updateHeadings = filteredHeadings.map((heading) => {
+  const className = heading.depth >= 2 ? `depth-${heading.depth}` : "";
+  return {
+    ...heading,
+    class: className,
+  };
+});
+---
+
+<Layout title={blog.data.title} description={blog.data.description}>
+  <nav>
+    <ul>
+      {
+        updateHeadings.map((heading) => (
+          <li class={heading.class}>
+            <a href={`#${heading.slug}`}>{heading.text}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  <Content />
+</Layout>
+
+<style>
+  .depth-2 {
+    margin: 0 0 0 10px;
+  }
+  .depth-3 {
+    margin: 0 0 0 20px;
+  }
+  .depth-4 {
+    margin: 0 0 0 30px;
+  }
+</style>
