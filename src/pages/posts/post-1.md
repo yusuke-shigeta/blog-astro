@@ -8,6 +8,7 @@ image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'Astroのロゴ。'
 tags: ['astro', 'study']
+slug: 'post-1'
 test: "frontmatter追加テスト"
 ---
 # メモ

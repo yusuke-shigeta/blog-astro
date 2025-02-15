@@ -15,6 +15,7 @@
     - [index.astro](#indexastro)
     - [about.astro](#aboutastro)
     - [blog.astro](#blogastro)
+    - [\[slug\].astro](#slugastro)
   - [src/pages/posts/](#srcpagesposts)
     - [post-1.md](#post-1md)
     - [post-2.md](#post-2md)
@@ -37,6 +38,7 @@
   - [src/layouts/](#srclayouts)
     - [BaseLayout.astro](#baselayoutastro)
     - [MarkdownPostLayout.astro](#markdownpostlayoutastro)
+  - [src/content/](#srccontent)
 
 # setting
 
@@ -114,6 +116,7 @@
     - index.astro
     - about.astro
     - blog.astro
+    - [slug].astro
     - /posts
       - post-1.md
       - post-2.md
@@ -136,8 +139,11 @@
   - /layouts
     - BaseLayout.astro
     - MarkdownPostLayout.astro
+  - /content
+  - 
 
 ## src/pages/
+
 ### index.astro
 
 - [url](http://localhost:4321/)
@@ -155,6 +161,10 @@
 - [url](http://localhost:4321/blog)
 - blogページ
 - layout: BaseLayout
+
+### [slug].astro
+
+- Markdownコンテンツにアクセスする用
 
 ## src/pages/posts/
 
@@ -267,3 +277,5 @@
 - 使用しているページ
   - 記事ページ
 - props
+
+## src/content/

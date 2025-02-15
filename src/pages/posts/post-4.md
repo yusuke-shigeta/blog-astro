@@ -8,6 +8,7 @@ image:
     url: 'https://docs.astro.build/assets/full-logo-light.png'
     alt: 'Astroのロゴ。'
 tags: ['astro', 'study', 'test']
+slug: 'post-4'
 ---
 # メモ
 - 複製元: src/pages/posts/post-3.md
