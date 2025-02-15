@@ -1,26 +1,20 @@
 ---
+import BaseLayout from "./BaseLayout.astro";
+
 const { frontmatter } = Astro.props;
+const mainColor = "orange";
 ---
 
-<!doctype html>
-<html lang="ja">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{frontmatter.title}</title>
-  </head>
-  <body> </body>
-</html>
-
-<h1>{frontmatter.title}</h1>
-<p>{frontmatter.description}</p>
-<p>投稿日: {frontmatter.pubDate.toString().slice(0, 10)}</p>
-<p>著者: {frontmatter.author}</p>
-<div class="thumbnail">
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-</div>
-<p>test{frontmatter.test}</p>
-<slot />
+<BaseLayout pageTitle={frontmatter.title} mainColor={mainColor}>
+  <p>{frontmatter.description}</p>
+  <p>投稿日: {frontmatter.pubDate.toString().slice(0, 10)}</p>
+  <p>著者: {frontmatter.author}</p>
+  <div class="thumbnail">
+    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+  </div>
+  <p>test{frontmatter.test}</p>
+  <slot />
+</BaseLayout>
 
 <style>
   body {

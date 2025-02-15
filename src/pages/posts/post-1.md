@@ -31,9 +31,12 @@ test: "frontmatter追加テスト"
   - slotはlayoutファイル
   - ページファイルではlayoutタグを仕様
   - レイアウトでもpropsを使用可能
+  - レイアウトを入れ子にすることも可能
 - Markdownのフロントマターでつくったやつ、`frontmatter`として配列になるらしい
   - frontmatter自由自在やん
   - tagsとかは連想配列か？
+- Astro.glob()
+- getStaticPaths()
 
 ## typescript
 - {条件} && ()
