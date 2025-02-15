@@ -27,3 +27,56 @@ slug: 'post-5'
 2. getStaticPathsでルーティング作成
 3. 各記事のfrontmatterに`slug`を追加
 4. `http://localhost:4321/post-5`などにアクセスしてみる
+
+## astroコマンドをインストール
+- インストールコマンド
+  - `npm install -g astro`
+    - 権限エラーで失敗
+      - `sudo npm install -g astro`
+        - 成功
+- インストールしたバージョンを確認
+  - `astro -v`
+    - `v5.3.0 Build faster websites.`
+- astroコマンド使用せずとも、.astroディレクトリあるくね？
+
+# コンテンツ管理にする
+
+## 参考記事
+- [参考記事1](https://evoworx.dev/blog/hylx27khn/)
+
+## 手順
+
+- `src/content/config.ts`を作成
+- コンテンツを作成
+  - `src/content/blog/240215.mdx`
+- mdxを使用可能にする
+  - `npx astro add mdx`
+- vscodeの設定でmdxを使用可能にする
+  - `.vscode/settings.json`
+- コンテンツページを作成
+  - `src/pages/blog/[...slug].astro`を作成
+    - 動的ルーティングさせる
+- コンテンツ一覧ページを作成
+  - `pages/blog/index.astro`
+    - `src/pages/blog.astro`とバッティングするため、これ削除
+      - 一旦バックアップ
+
+```
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
+
+const allPosts = await Astro.glob("../pages/posts/*.md");
+
+const pageTitle = "BLOG";
+
+const mainColor = "red";
+---
+
+<BaseLayout pageTitle={pageTitle} mainColor={mainColor}>
+  <ul>
+    {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+  </ul>
+  <pre>{JSON.stringify(allPosts, null, 2)}</pre>
+</BaseLayout>
+```
