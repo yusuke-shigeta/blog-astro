@@ -22,6 +22,7 @@
     - [post-4.md](#post-4md)
   - [src/pages//tags/](#srcpagestags)
     - [\[tag\].astro](#tagastro)
+    - [index.astro](#indexastro-1)
   - [src/styles/](#srcstyles)
     - [global.css](#globalcss)
   - [src/components/](#srccomponents)
@@ -120,6 +121,7 @@
       - post-4.md
     - /tags
       - [tag].astro
+      - index.astro
   - /styles
     - global.css
   - /components
@@ -155,6 +157,7 @@
 - layout: BaseLayout
 
 ## src/pages/posts/
+
 ### post-1.md
 
 - [url](http://localhost:4321/posts/post-1)
@@ -173,14 +176,23 @@
 - globの動作確認のため作成
 
 ## src/pages//tags/
+
 ### [tag].astro
 
+- 各タグの個別ページ
+
+### index.astro
+
+- tag一覧ページ
+
 ## src/styles/
+
 ### global.css
 
 - サイト全体に適用させる
 
 ## src/components/
+
 ### Navigation.astro
 
 - ヘッダのナビゲーション部分
@@ -229,6 +241,7 @@
   - title
 
 ## src/script/
+
 ### menu.js
 
 - Hamburgerメニューのscript
@@ -238,6 +251,7 @@
   - blog
 
 ## src/layouts/
+
 ### BaseLayout.astro
 
 - 使用しているページ
