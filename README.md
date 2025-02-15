@@ -1,5 +1,3 @@
-# index
-- [index](#index)
 - [setting](#setting)
   - [git](#git)
   - [action](#action)
@@ -13,21 +11,31 @@
 - [url](#url)
 - [npm コマンド](#npm-コマンド)
 - [file](#file)
-  - [src/pages/index.astro](#srcpagesindexastro)
-  - [src/pages/about.astro](#srcpagesaboutastro)
-  - [src/pages/blog.astro](#srcpagesblogastro)
-  - [src/pages/posts/post-1.md](#srcpagespostspost-1md)
-  - [src/pages/posts/post-2.md](#srcpagespostspost-2md)
-  - [src/pages/posts/post-3.md](#srcpagespostspost-3md)
-  - [src/styles/global.css](#srcstylesglobalcss)
-  - [src/components/Navigation.astro](#srccomponentsnavigationastro)
-  - [src/components/Footer.astro](#srccomponentsfooterastro)
-  - [src/components/Social.astro](#srccomponentssocialastro)
-  - [src/components/Header.astro](#srccomponentsheaderastro)
-  - [src/components/Hamburger.astro](#srccomponentshamburgerastro)
-  - [src/script/menu.js](#srcscriptmenujs)
-  - [src/layouts/BaseLayout.astro](#srclayoutsbaselayoutastro)
-  - [src/layouts/MarkdownPostLayout.astro](#srclayoutsmarkdownpostlayoutastro)
+  - [src/pages/](#srcpages)
+    - [index.astro](#indexastro)
+    - [about.astro](#aboutastro)
+    - [blog.astro](#blogastro)
+  - [src/pages/posts/](#srcpagesposts)
+    - [post-1.md](#post-1md)
+    - [post-2.md](#post-2md)
+    - [post-3.md](#post-3md)
+    - [post-4.md](#post-4md)
+  - [src/pages//tags/](#srcpagestags)
+    - [\[tag\].astro](#tagastro)
+  - [src/styles/](#srcstyles)
+    - [global.css](#globalcss)
+  - [src/components/](#srccomponents)
+    - [Navigation.astro](#navigationastro)
+    - [Footer.astro](#footerastro)
+    - [Social.astro](#socialastro)
+    - [Header.astro](#headerastro)
+    - [Hamburger.astro](#hamburgerastro)
+    - [BlogPost.astro](#blogpostastro)
+  - [src/script/](#srcscript)
+    - [menu.js](#menujs)
+  - [src/layouts/](#srclayouts)
+    - [BaseLayout.astro](#baselayoutastro)
+    - [MarkdownPostLayout.astro](#markdownpostlayoutastro)
 
 # setting
 
@@ -109,6 +117,9 @@
       - post-1.md
       - post-2.md
       - post-3.md
+      - post-4.md
+    - /tags
+      - [tag].astro
   - /styles
     - global.css
   - /components
@@ -117,47 +128,60 @@
     - Social.astro
     - Header.astro
     - Hamburger.astro
+    - BlogPost.astro
   - /script
     - menu.js
   - /layouts
     - BaseLayout.astro
     - MarkdownPostLayout.astro
 
-## src/pages/index.astro
+## src/pages/
+### index.astro
 
 - [url](http://localhost:4321/)
 - topページ
 - layout: BaseLayout
 
-## src/pages/about.astro
+### about.astro
 
 - [url](http://localhost:4321/about)
 - aboutページ
 - layout: BaseLayout
 
-## src/pages/blog.astro
+### blog.astro
 
 - [url](http://localhost:4321/blog)
 - blogページ
 - layout: BaseLayout
 
-## src/pages/posts/post-1.md
+## src/pages/posts/
+### post-1.md
 
 - [url](http://localhost:4321/posts/post-1)
 
-## src/pages/posts/post-2.md
+### post-2.md
 
 - [url](http://localhost:4321/posts/post-2)
 
-## src/pages/posts/post-3.md
+### post-3.md
 
 - [url](http://localhost:4321/posts/post-3)
 
-## src/styles/global.css
+### post-4.md
+
+- [url](http://localhost:4321/posts/post-4)
+- globの動作確認のため作成
+
+## src/pages//tags/
+### [tag].astro
+
+## src/styles/
+### global.css
 
 - サイト全体に適用させる
 
-## src/components/Navigation.astro
+## src/components/
+### Navigation.astro
 
 - ヘッダのナビゲーション部分
 - importしているページ
@@ -165,7 +189,7 @@
   - about
   - blog
 
-## src/components/Footer.astro
+### Footer.astro
 
 - 共通フッター
 - importしているページ
@@ -173,7 +197,7 @@
   - about
   - blog
 
-## src/components/Social.astro
+### Social.astro
 
 - ソーシャルメディアのリスト
 - importしているコンポーネント
@@ -182,7 +206,7 @@
   - platform
   - username
 
-## src/components/Header.astro
+### Header.astro
 
 - 共通ヘッダー
 - importしているページ
@@ -190,12 +214,22 @@
   - about
   - blog
 
-## src/components/Hamburger.astro
+### Hamburger.astro
 
 - ヘッダーハンバーガーメニュー
 - mobile表示時のみ表示
 
-## src/script/menu.js
+### BlogPost.astro
+
+- 記事への導線
+- importしているページ
+  - blog
+- props
+  - url
+  - title
+
+## src/script/
+### menu.js
 
 - Hamburgerメニューのscript
 - importしているページ
@@ -203,7 +237,8 @@
   - about
   - blog
 
-## src/layouts/BaseLayout.astro
+## src/layouts/
+### BaseLayout.astro
 
 - 使用しているページ
   - top
@@ -213,7 +248,7 @@
   - pageTitle
   - mainColor
 
-## src/layouts/MarkdownPostLayout.astro
+### MarkdownPostLayout.astro
 
 - 使用しているページ
   - 記事ページ

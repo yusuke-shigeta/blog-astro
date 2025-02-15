@@ -35,8 +35,12 @@ test: "frontmatter追加テスト"
 - Markdownのフロントマターでつくったやつ、`frontmatter`として配列になるらしい
   - frontmatter自由自在やん
   - tagsとかは連想配列か？
-- Astro.glob()
+- [`Astro.glob()`](https://docs.astro.build/ja/guides/imports/#astroglob)
+  - 多数のファイルを一度にimportしたい時
 - getStaticPaths()
+- デバッグはとりあえずterminalかページで見てみる
+  - ページに出力する場合のコード`<pre>{JSON.stringify(allPosts, null, 2)}</pre>`
+- 動的なページルーティング
 
 ## typescript
 - {条件} && ()
