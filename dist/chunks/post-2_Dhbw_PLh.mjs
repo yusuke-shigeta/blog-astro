@@ -6,7 +6,7 @@ const frontmatter = {
   "title": "mdxってなんぞや",
   "description": "mdとmdxの違いを簡単にリストアップ",
   "thumbnail": "astro_thumb.jpg",
-  "tags": ["Astro"]
+  "tags": ["Astro", "Markdown", "MDX"]
 };
 function getHeadings() {
   return [{

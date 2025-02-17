@@ -1,7 +1,7 @@
 import { c as createComponent, r as renderTemplate, b as renderComponent, m as maybeRenderHead, e as addAttribute } from '../chunks/astro/server_BDs0mMKt.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../chunks/_astro_content_yO_0bpYx.mjs';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_BmNXvDhY.mjs';
+import { g as getCollection } from '../chunks/_astro_content_BYCUu8YV.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_B3Bv8PE3.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {

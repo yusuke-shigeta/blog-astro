@@ -2,9 +2,16 @@
 
 ---
 
-<div class="nav-links">
-  <a href="/">Home</a>
-  <a href="/about">About</a>
-  <a href="/blog">Blog</a>
-  <a href="/tags">Tag</a>
-</div>
+<ul class="nav-list">
+  <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+  <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+  <li class="nav-item"><a class="nav-link" href="/blog">Blog</a></li>
+  <li class="nav-item"><a class="nav-link" href="/tags">Tag</a></li>
+</ul>
+
+<style>
+  .nav-list {
+    display: flex;
+    gap: 0 20px;
+  }
+</style>

@@ -3,16 +3,12 @@ import 'kleur/colors';
 import 'clsx';
 /* empty css                          */
 
-const $$Hamburger = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<div class="hamburger"> <span class="line"></span> <span class="line"></span> <span class="line"></span> </div>`;
-}, "/Users/yusuke.shigeta/workspace/blog-astro/src/components/Hamburger.astro", void 0);
-
 const $$Navigation = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<div class="nav-links"> <a href="/">Home</a> <a href="/about">About</a> <a href="/blog">Blog</a> <a href="/tags">Tag</a> </div>`;
+  return renderTemplate`${maybeRenderHead()}<ul class="nav-list" data-astro-cid-pux6a34n> <li class="nav-item" data-astro-cid-pux6a34n><a class="nav-link" href="/" data-astro-cid-pux6a34n>Home</a></li> <li class="nav-item" data-astro-cid-pux6a34n><a class="nav-link" href="/about" data-astro-cid-pux6a34n>About</a></li> <li class="nav-item" data-astro-cid-pux6a34n><a class="nav-link" href="/blog" data-astro-cid-pux6a34n>Blog</a></li> <li class="nav-item" data-astro-cid-pux6a34n><a class="nav-link" href="/tags" data-astro-cid-pux6a34n>Tag</a></li> </ul> `;
 }, "/Users/yusuke.shigeta/workspace/blog-astro/src/components/Navigation.astro", void 0);
 
 const $$Header = createComponent(($$result, $$props, $$slots) => {
-  return renderTemplate`${maybeRenderHead()}<header> <nav> ${renderComponent($$result, "Hamburger", $$Hamburger, {})} ${renderComponent($$result, "Navigation", $$Navigation, {})} </nav> </header>`;
+  return renderTemplate`${maybeRenderHead()}<header data-astro-cid-3ef6ksr2> <nav data-astro-cid-3ef6ksr2> ${renderComponent($$result, "Navigation", $$Navigation, { "data-astro-cid-3ef6ksr2": true })} </nav> </header> `;
 }, "/Users/yusuke.shigeta/workspace/blog-astro/src/components/Header.astro", void 0);
 
 const $$Astro$1 = createAstro();
