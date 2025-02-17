@@ -17,7 +17,7 @@ const { Content, headings } = await blog.render();
 console.log(blog);
 ---
 
-<MarkdownPostLayout title={blog.data.title} description={blog.data.description} date={blog.data.date}>
+<MarkdownPostLayout title={blog.data.title} description={blog.data.description} date={blog.data.date} tags={blog.data.tags}>
   <Toc headings={headings} />
   <Content />
 </MarkdownPostLayout>

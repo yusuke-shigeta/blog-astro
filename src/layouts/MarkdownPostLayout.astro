@@ -1,24 +1,23 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const { date, title, description } = Astro.props;
+const { date, title, description, tags } = Astro.props;
 ---
 
 <BaseLayout pageTitle={title}>
   <p><em>{description}</em></p>
   <p>{date}</p>
-
-  <!-- <div class="tags">
+  <div class="tags">
     {
-      frontmatter.tags.map((tag) => (
+      tags.map((tag) => (
         <p class="tag">
           <a href={`/tags/${tag}`}>{tag}</a>
         </p>
       ))
     }
-  </div> -->
-
+  </div>
   <slot />
 </BaseLayout>
+
 <style>
   a {
     color: #00539f;
