@@ -1,11 +1,13 @@
 ---
 import { getCollection } from "astro:content";
-import Layout from "../../layouts/Layout.astro";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const blogEntries = await getCollection("blog");
+
+const pageTitle = "Blog";
 ---
 
-<Layout title="" description="">
+<BaseLayout pageTitle={pageTitle}>
   <ul>
     {
       blogEntries.map((blogPostEntry) => (
@@ -18,4 +20,4 @@ const blogEntries = await getCollection("blog");
       ))
     }
   </ul>
-</Layout>
+</BaseLayout>
