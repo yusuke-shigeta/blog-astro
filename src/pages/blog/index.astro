@@ -1,6 +1,6 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import { getCollection } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 const blogCollections = await getCollection("blog");
 
@@ -13,7 +13,6 @@ const pageTitle = "Blog";
       blogCollections.map((blogCollection) => (
         <li>
           <a href={`/blog/${blogCollection.slug}`}>
-            {/* <img src={blogCollection.data.thumbnail} alt={blogCollection.data.title} /> */}
             <p>{blogCollection.data.title}</p>
           </a>
         </li>

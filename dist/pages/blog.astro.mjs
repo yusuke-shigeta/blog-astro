@@ -1,13 +1,13 @@
-import { c as createComponent, r as renderTemplate, b as renderComponent, m as maybeRenderHead, d as addAttribute } from '../chunks/astro/server_CecKvSIS.mjs';
+import { c as createComponent, r as renderTemplate, b as renderComponent, m as maybeRenderHead, e as addAttribute } from '../chunks/astro/server_BDs0mMKt.mjs';
 import 'kleur/colors';
-import { $ as $$BaseLayout } from '../chunks/BaseLayout_LPo9KOwk.mjs';
-import { g as getCollection } from '../chunks/_astro_content_Dg7IxTW4.mjs';
+import { g as getCollection } from '../chunks/_astro_content_yO_0bpYx.mjs';
+import { $ as $$BaseLayout } from '../chunks/BaseLayout_BmNXvDhY.mjs';
 export { renderers } from '../renderers.mjs';
 
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
   const blogCollections = await getCollection("blog");
   const pageTitle = "Blog";
-  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<ul> ${blogCollections.map((blogCollection) => renderTemplate`<li> <a${addAttribute(`/blog/${blogCollection.slug}`, "href")}>  <p>${blogCollection.data.title}</p> </a> </li>`)} </ul> ` })}`;
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": pageTitle }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<ul> ${blogCollections.map((blogCollection) => renderTemplate`<li> <a${addAttribute(`/blog/${blogCollection.slug}`, "href")}> <p>${blogCollection.data.title}</p> </a> </li>`)} </ul> ` })}`;
 }, "/Users/yusuke.shigeta/workspace/blog-astro/src/pages/blog/index.astro", void 0);
 
 const $$file = "/Users/yusuke.shigeta/workspace/blog-astro/src/pages/blog/index.astro";

@@ -2,7 +2,7 @@ import { Traverse } from 'neotraverse/modern';
 import pLimit from 'p-limit';
 import { z, ZodIssueCode } from 'zod';
 import { removeBase, isRemotePath, prependForwardSlash } from '@astrojs/internal-helpers/path';
-import { A as AstroError, U as UnknownContentCollectionError, c as createComponent, R as RenderUndefinedEntryError, r as renderTemplate, u as unescapeHTML, e as renderUniqueStylesheet, f as renderScriptElement, g as createHeadAndContent, b as renderComponent } from './astro/server_CecKvSIS.mjs';
+import { A as AstroError, U as UnknownContentCollectionError, c as createComponent, R as RenderUndefinedEntryError, r as renderTemplate, u as unescapeHTML, f as renderUniqueStylesheet, g as renderScriptElement, h as createHeadAndContent, b as renderComponent } from './astro/server_BDs0mMKt.mjs';
 import 'kleur/colors';
 import * as devalue from 'devalue';
 
@@ -95,7 +95,7 @@ class ImmutableDataStore {
    */
   static async fromModule() {
     try {
-      const data = await import('./_astro_data-layer-content_8FWb4UcR.mjs');
+      const data = await import('./_astro_data-layer-content_BgaNJQIv.mjs');
       if (data.default instanceof Map) {
         return ImmutableDataStore.fromMap(data.default);
       }
@@ -242,7 +242,7 @@ const CONTENT_LAYER_IMAGE_REGEX = /__ASTRO_IMAGE_="([^"]+)"/g;
 async function updateImageReferencesInBody(html, fileName) {
   const { default: imageAssetMap } = await import('./content-assets_DleWbedO.mjs');
   const imageObjects = /* @__PURE__ */ new Map();
-  const { getImage } = await import('./_astro_assets_C2aCImq9.mjs').then(n => n._);
+  const { getImage } = await import('./_astro_assets_BP5cq_up.mjs').then(n => n._);
   for (const [_full, imagePath] of html.matchAll(CONTENT_LAYER_IMAGE_REGEX)) {
     try {
       const decodedImagePath = JSON.parse(imagePath.replaceAll("&#x22;", '"'));
@@ -297,7 +297,7 @@ async function renderEntry(entry) {
   }
   if (entry.deferredRender) {
     try {
-      const { default: contentModules } = await import('./content-modules_DJhkMzLG.mjs');
+      const { default: contentModules } = await import('./content-modules_BgRgEdci.mjs');
       const renderEntryImport = contentModules.get(entry.filePath);
       return render({
         collection: "",

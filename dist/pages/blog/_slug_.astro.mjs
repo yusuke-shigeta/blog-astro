@@ -1,10 +1,18 @@
-import { c as createComponent, a as createAstro, r as renderTemplate, m as maybeRenderHead, d as addAttribute, b as renderComponent } from '../../chunks/astro/server_CecKvSIS.mjs';
+import { c as createComponent, a as createAstro, r as renderTemplate, b as renderComponent, m as maybeRenderHead, d as renderSlot, e as addAttribute } from '../../chunks/astro/server_BDs0mMKt.mjs';
 import 'kleur/colors';
-import { g as getCollection } from '../../chunks/_astro_content_Dg7IxTW4.mjs';
-import { $ as $$MarkdownPostLayout } from '../../chunks/MarkdownPostLayout_DTQOs-8j.mjs';
-import 'clsx';
+import { g as getCollection } from '../../chunks/_astro_content_yO_0bpYx.mjs';
+import { $ as $$BaseLayout } from '../../chunks/BaseLayout_BmNXvDhY.mjs';
 /* empty css                                     */
+import 'clsx';
 export { renderers } from '../../renderers.mjs';
+
+const $$Astro$2 = createAstro();
+const $$MarkdownPostLayout = createComponent(($$result, $$props, $$slots) => {
+  const Astro2 = $$result.createAstro($$Astro$2, $$props, $$slots);
+  Astro2.self = $$MarkdownPostLayout;
+  const { date, title, description, tags } = Astro2.props;
+  return renderTemplate`${renderComponent($$result, "BaseLayout", $$BaseLayout, { "pageTitle": title, "data-astro-cid-5grsw2hi": true }, { "default": ($$result2) => renderTemplate` ${maybeRenderHead()}<p data-astro-cid-5grsw2hi><em data-astro-cid-5grsw2hi>${description}</em></p> <p data-astro-cid-5grsw2hi>${date.toISOString().slice(0, 10)}</p> <div class="tags" data-astro-cid-5grsw2hi> ${tags.map((tag) => renderTemplate`<p class="tag" data-astro-cid-5grsw2hi> <a${addAttribute(`/tags/${tag}`, "href")} data-astro-cid-5grsw2hi>${tag}</a> </p>`)} </div> ${renderSlot($$result2, $$slots["default"])} ` })} `;
+}, "/Users/yusuke.shigeta/workspace/blog-astro/src/layouts/MarkdownPostLayout.astro", void 0);
 
 const $$Astro$1 = createAstro();
 const $$Toc = createComponent(($$result, $$props, $$slots) => {

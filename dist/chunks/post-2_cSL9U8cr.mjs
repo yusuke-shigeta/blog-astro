@@ -1,8 +1,8 @@
-import { i as createVNode, G as Fragment, _ as __astro_tag_component__ } from './astro/server_CecKvSIS.mjs';
+import { n as createVNode, G as Fragment, _ as __astro_tag_component__ } from './astro/server_BDs0mMKt.mjs';
 import 'clsx';
 
 const frontmatter = {
-  "date": 20250215,
+  "date": "2025-02-15T00:00:00.000Z",
   "title": "mdxってなんぞや",
   "description": "mdとmdxの違いを簡単にリストアップ",
   "thumbnail": "astro_thumb.jpg",

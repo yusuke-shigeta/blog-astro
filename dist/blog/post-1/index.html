@@ -1,7 +1,56 @@
-<!DOCTYPE html><html lang="ja" data-astro-cid-37fxchfa style=""> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.2.5"><title>AstroのContent Collectionsでブログをつくる</title><style>a[data-astro-cid-5grsw2hi]{color:#00539f}.tags[data-astro-cid-5grsw2hi]{display:flex;flex-wrap:wrap}.tag[data-astro-cid-5grsw2hi]{margin:.25em;border:dotted 1px #a1a1a1;border-radius:.5em;padding:.5em 1em;font-size:1.15em;background-color:#f8fcfd}
-.depth-2[data-astro-cid-6t6zfk7k]{margin:0 0 0 10px}.depth-3[data-astro-cid-6t6zfk7k]{margin:0 0 0 20px}.depth-4[data-astro-cid-6t6zfk7k]{margin:0 0 0 30px}
-a[data-astro-cid-yxtifmrq]{padding:.5rem 1rem;color:#fff;background-color:#4c1d95;text-decoration:none}footer[data-astro-cid-sz7xmlte]{display:flex;gap:1rem;margin-top:2rem}html{background-color:#f1f5f9;font-family:sans-serif}body{margin:0 auto;width:100%;max-width:80ch;padding:1rem;line-height:1.5}*{box-sizing:border-box}h1{margin:1rem 0;font-size:2.5rem}.nav-links{width:100%;top:5rem;left:48px;background-color:#ff9776;display:none;margin:0}.nav-links a{display:block;text-align:center;padding:10px 0;text-decoration:none;font-size:1.2rem;font-weight:700;text-transform:uppercase}.nav-links a:hover,.nav-links a:focus{background-color:#ff9776}.expanded{display:unset}@media screen and (min-width: 636px){.nav-links{margin-left:5em;display:block;position:static;width:auto;background:none}.nav-links a{display:inline-block;padding:15px 20px}}.hamburger{padding-right:20px;cursor:pointer}.hamburger .line{display:block;width:40px;height:5px;margin-bottom:10px;background-color:#ff9776}@media screen and (min-width: 636px){.hamburger{display:none}}h1[data-astro-cid-37fxchfa]{color:var(--mainColor);font-size:2rem}.skill[data-astro-cid-37fxchfa]{color:#000}
-</style></head> <body data-astro-cid-37fxchfa style=""> <header> <nav> <div class="hamburger"> <span class="line"></span> <span class="line"></span> <span class="line"></span> </div> <div class="nav-links"> <a href="/">Home</a> <a href="/about">About</a> <a href="/blog">Blog</a> <a href="/tags">Tag</a> </div> </nav> </header> <h1 data-astro-cid-37fxchfa style="">AstroのContent Collectionsでブログをつくる</h1>  <p data-astro-cid-5grsw2hi><em data-astro-cid-5grsw2hi>AstroのContent Collectionsはマークダウンを型安全に管理するための機能です。Content Collectionsを用いたブログの構築手順をご紹介します。</em></p> <p data-astro-cid-5grsw2hi>20250215</p> <div class="tags" data-astro-cid-5grsw2hi> <p class="tag" data-astro-cid-5grsw2hi> <a href="/tags/Astro" data-astro-cid-5grsw2hi>Astro</a> </p><p class="tag" data-astro-cid-5grsw2hi> <a href="/tags/Content Collections" data-astro-cid-5grsw2hi>Content Collections</a> </p> </div>  <nav data-astro-cid-6t6zfk7k> <ul data-astro-cid-6t6zfk7k> <li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#heading2" data-astro-cid-6t6zfk7k>heading2</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#heading3" data-astro-cid-6t6zfk7k>heading3</a> </li> </ul> </nav>  <h2 id="heading2">heading2</h2>
-<h3 id="heading3">heading3</h3>
-<p>Content Collectionsは<code>.md</code>や<code>.mdx</code>を型安全に管理するためのAstroの機能です。astro@2.0.0で追加されました。
-でも型そんなちゃんと管理したいか？</p>   <footer data-astro-cid-sz7xmlte> <a href="https://www.git.com/yusuke-shigeta" data-astro-cid-yxtifmrq>git</a>  <a href="https://www.twiiter.com/yusuke-shigeta" data-astro-cid-yxtifmrq>twiiter</a>  <a href="https://www.instagram.com/yusuke-shigeta" data-astro-cid-yxtifmrq>instagram</a>  </footer>  <script type="module">document.querySelector(".hamburger").addEventListener("click",()=>{document.querySelector(".nav-links").classList.toggle("expanded")});</script> </body> </html>  
+<!DOCTYPE html><html lang="ja" data-astro-cid-37fxchfa style=""> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.2.5"><title>AstroのブログをContent管理にする</title><style>a[data-astro-cid-5grsw2hi]{color:#00539f}.tags[data-astro-cid-5grsw2hi]{display:flex;flex-wrap:wrap}.tag[data-astro-cid-5grsw2hi]{margin:.25em;border:dotted 1px #a1a1a1;border-radius:.5em;padding:.5em 1em;background-color:#f8fcfd}.depth-2[data-astro-cid-6t6zfk7k]{margin:0 0 0 10px}.depth-3[data-astro-cid-6t6zfk7k]{margin:0 0 0 20px}.depth-4[data-astro-cid-6t6zfk7k]{margin:0 0 0 30px}
+a[data-astro-cid-yxtifmrq]{padding:.5rem 1rem;color:#fff;background-color:#4c1d95;text-decoration:none}footer[data-astro-cid-sz7xmlte]{display:flex;gap:1rem;margin-top:2rem}h1,h2,h3,h4,h5,h6,p{margin:0}html{background-color:#fff;font-family:sans-serif;font-size:.26666666666666666vw}body{margin:0 auto;width:100%;max-width:1200px;padding:0 14px;line-height:1.5}*{box-sizing:border-box;font-size:16px}code{background-color:#dcdcdc}@media screen and (min-width: 636px){html{font-size:65%}}.nav-links{width:100%;top:5rem;left:48px;background-color:#ff9776;display:none;margin:0}.nav-links a{display:block;text-align:center;padding:10px 0;text-decoration:none;font-weight:700;text-transform:uppercase}.nav-links a:hover,.nav-links a:focus{background-color:#ff9776}.expanded{display:unset}@media screen and (min-width: 636px){.nav-links{position:static;display:block;width:auto;background:none}.nav-links a{display:inline-block;padding:5px}}.hamburger{padding-right:20px;cursor:pointer}.hamburger .line{display:block;width:40px;height:5px;margin-bottom:10px;background-color:#ff9776}@media screen and (min-width: 636px){.hamburger{display:none}}h1[data-astro-cid-37fxchfa]{color:var(--mainColor)}.skill[data-astro-cid-37fxchfa]{color:#000}
+</style></head> <body data-astro-cid-37fxchfa style=""> <header> <nav> <div class="hamburger"> <span class="line"></span> <span class="line"></span> <span class="line"></span> </div> <div class="nav-links"> <a href="/">Home</a> <a href="/about">About</a> <a href="/blog">Blog</a> <a href="/tags">Tag</a> </div> </nav> </header> <h1 data-astro-cid-37fxchfa style="">AstroのブログをContent管理にする</h1>  <p data-astro-cid-5grsw2hi><em data-astro-cid-5grsw2hi>AstroのContent Collectionsはマークダウンを型安全に管理するための機能です。Content Collectionsを用いたブログの構築手順をご紹介します。</em></p> <p data-astro-cid-5grsw2hi>2025-02-15</p> <div class="tags" data-astro-cid-5grsw2hi> <p class="tag" data-astro-cid-5grsw2hi> <a href="/tags/Astro" data-astro-cid-5grsw2hi>Astro</a> </p><p class="tag" data-astro-cid-5grsw2hi> <a href="/tags/study" data-astro-cid-5grsw2hi>study</a> </p> </div>  <nav data-astro-cid-6t6zfk7k> <ul data-astro-cid-6t6zfk7k> <li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#mdxを使用できるように設定" data-astro-cid-6t6zfk7k>mdxを使用できるように設定</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#コンテンツ管理のためルーティング設定" data-astro-cid-6t6zfk7k>コンテンツ管理のためルーティング設定</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#コンテンツ管理にできたので目次作って見る" data-astro-cid-6t6zfk7k>コンテンツ管理にできたので目次作って見る</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#memo" data-astro-cid-6t6zfk7k>memo</a> </li> </ul> </nav>  <h2 id="mdxを使用できるように設定">mdxを使用できるように設定</h2>
+<p><a href="https://evoworx.dev/blog/hylx27khn/">参考記事</a></p>
+<ul>
+<li><code>src/content/config.ts</code>を作成</li>
+<li>コンテンツを作成
+<ul>
+<li><code>src/content/blog/240215.mdx</code></li>
+</ul>
+</li>
+<li>mdxを使用可能にする
+<ul>
+<li><code>npx astro add mdx</code></li>
+</ul>
+</li>
+<li>vscodeの設定でmdxを使用可能にする
+<ul>
+<li><code>.vscode/settings.json</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="コンテンツ管理のためルーティング設定">コンテンツ管理のためルーティング設定</h2>
+<ul>
+<li>コンテンツページを作成
+<ul>
+<li><code>src/pages/blog/[...slug].astro</code>を作成
+<ul>
+<li>動的ルーティングさせる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>コンテンツ一覧ページを作成
+<ul>
+<li><code>pages/blog/index.astro</code>
+<ul>
+<li><code>src/pages/blog.astro</code>とバッティングするため、これ削除</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="コンテンツ管理にできたので目次作って見る">コンテンツ管理にできたので目次作って見る</h2>
+<ul>
+<li>renderを使用し、Contentと同様、記事のheadingリストを取得する</li>
+<li>目次をうまい具合に出力する</li>
+</ul>
+<h2 id="memo">memo</h2>
+<ul>
+<li>一旦、frontmatterは使用しない。
+<ul>
+<li>frontmatter layoutも使用しない。</li>
+</ul>
+</li>
+</ul>   <footer data-astro-cid-sz7xmlte> <a href="https://www.git.com/yusuke-shigeta" data-astro-cid-yxtifmrq>git</a>  <a href="https://www.twiiter.com/yusuke-shigeta" data-astro-cid-yxtifmrq>twiiter</a>  <a href="https://www.instagram.com/yusuke-shigeta" data-astro-cid-yxtifmrq>instagram</a>  </footer>  <script type="module">document.querySelector(".hamburger").addEventListener("click",()=>{document.querySelector(".nav-links").classList.toggle("expanded")});</script> </body> </html>  
