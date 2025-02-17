@@ -1,0 +1,36 @@
+---
+const { headings } = Astro.props;
+
+const filteredHeadings = headings.filter((heading) => heading.depth <= 4);
+const updateHeadings = filteredHeadings.map((heading) => {
+  const className = heading.depth >= 2 ? `depth-${heading.depth}` : "";
+  return {
+    ...heading,
+    class: className,
+  };
+});
+---
+
+<nav>
+  <ul>
+    {
+      updateHeadings.map((heading) => (
+        <li class={heading.class}>
+          <a href={`#${heading.slug}`}>{heading.text}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .depth-2 {
+    margin: 0 0 0 10px;
+  }
+  .depth-3 {
+    margin: 0 0 0 20px;
+  }
+  .depth-4 {
+    margin: 0 0 0 30px;
+  }
+</style>
