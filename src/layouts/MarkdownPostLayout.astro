@@ -5,7 +5,7 @@ const { date, title, description, tags } = Astro.props;
 
 <BaseLayout pageTitle={title}>
   <p><em>{description}</em></p>
-  <p>{date}</p>
+  <p>{date.toISOString().slice(0, 10)}</p>
   <div class="tags">
     {
       tags.map((tag) => (

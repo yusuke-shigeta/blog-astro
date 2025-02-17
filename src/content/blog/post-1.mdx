@@ -1,14 +1,37 @@
 ---
-# layout: ../../layouts/MarkdownPostLayout.astro
-date: 20250215
-title: 'AstroのContent Collectionsでブログをつくる'
+date: 2025-02-15
+title: 'AstroのブログをContent管理にする'
 description: 'AstroのContent Collectionsはマークダウンを型安全に管理するための機能です。Content Collectionsを用いたブログの構築手順をご紹介します。'
 thumbnail: 'astro_thumb.jpg'
-tags: ['Astro', 'Content Collections']
+tags: ['Astro', 'study']
 ---
 
-## heading2
-### heading3
+## mdxを使用できるように設定
+[参考記事](https://evoworx.dev/blog/hylx27khn/)
 
-Content Collectionsは`.md`や`.mdx`を型安全に管理するためのAstroの機能です。astro@2.0.0で追加されました。
-でも型そんなちゃんと管理したいか？
+- `src/content/config.ts`を作成
+- コンテンツを作成
+  - `src/content/blog/240215.mdx`
+- mdxを使用可能にする
+  - `npx astro add mdx`
+- vscodeの設定でmdxを使用可能にする
+  - `.vscode/settings.json`
+
+## コンテンツ管理のためルーティング設定
+
+- コンテンツページを作成
+  - `src/pages/blog/[...slug].astro`を作成
+    - 動的ルーティングさせる
+- コンテンツ一覧ページを作成
+  - `pages/blog/index.astro`
+    - `src/pages/blog.astro`とバッティングするため、これ削除
+
+## コンテンツ管理にできたので目次作って見る
+
+- renderを使用し、Contentと同様、記事のheadingリストを取得する
+- 目次をうまい具合に出力する
+
+## memo
+
+- 一旦、frontmatterは使用しない。
+  - frontmatter layoutも使用しない。
