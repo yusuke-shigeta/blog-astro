@@ -20,4 +20,4 @@ jobs:
           password: ${{ secrets.PROD_PASSWORD }}
           local-dir: ./dist/
           server-dir: /yusuke-shigeta.com/public_html/
-          # dangerous-clean-slate: true # サーバーディレクトリを完全にクリアしてからデプロイ
+          dangerous-clean-slate: true # サーバーディレクトリを完全にクリアしてからデプロイ
