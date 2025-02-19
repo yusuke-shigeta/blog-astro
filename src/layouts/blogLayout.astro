@@ -12,3 +12,11 @@ const { date, title, description, tags } = Astro.props;
   </ul>
   <slot />
 </BaseLayout>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
