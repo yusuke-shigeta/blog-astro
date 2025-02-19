@@ -1,38 +1,14 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import TagItem from "../components/TagItem.astro";
 const { date, title, description, tags } = Astro.props;
 ---
 
 <BaseLayout pageTitle={title}>
   <p><em>{description}</em></p>
   <p>{date.toISOString().slice(0, 10)}</p>
-  <div class="tags">
-    {
-      tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
+  <ul class="tags">
+    <TagItem tags={tags} />
+  </ul>
   <slot />
 </BaseLayout>
-
-<style>
-  a {
-    color: #00539f;
-  }
-
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    background-color: #f8fcfd;
-  }
-</style>

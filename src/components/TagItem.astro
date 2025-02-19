@@ -1,0 +1,19 @@
+---
+const { tags } = Astro.props;
+---
+
+{
+  tags.map((tag) => (
+    <li class="tag">
+      <a href={`/tags/${tag}`}>{tag}</a>
+    </li>
+  ))
+}
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+</style>
