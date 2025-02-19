@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import BlogItem from "../../components/BlogItem.astro";
+import BlogList from "../../components/BlogList.astro";
 
 const blogCollections = await getCollection("blog");
 
@@ -9,7 +9,5 @@ const pageTitle = "Blog";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <ul>
-    <BlogItem blogCollections={blogCollections} />
-  </ul>
+  <BlogList blogCollections={blogCollections} />
 </BaseLayout>

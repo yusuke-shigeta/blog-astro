@@ -1,0 +1,15 @@
+---
+const { blogCollections } = Astro.props;
+---
+
+<ul class="blogs">
+  {
+    blogCollections.map((blogCollection) => (
+      <li>
+        <a href={`/blog/${blogCollection.slug}`}>
+          <p>{blogCollection.data.title}</p>
+        </a>
+      </li>
+    ))
+  }
+</ul>
