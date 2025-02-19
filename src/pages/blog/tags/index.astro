@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../../../layouts/BaseLayout.astro";
+
+const blogs = await getCollection("blog");
+const tagsSet = new Set();
+
+blogs.forEach((blog) => {
+  if (blog.data.tags) {
+    blog.data.tags.forEach((tag) => tagsSet.add(tag));
+  }
+});
+
+const tags = Array.from(tagsSet);
+
+const pageTitle = "Tag";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+  <ul>
+    {
+      tags.map((tag) => (
+        <li key={tag}>
+          <a href={`blog/${tag}`}>{tag}</a>
+        </li>
+      ))
+    }
+  </ul>
+</BaseLayout>
