@@ -1,6 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
+import BlogList from "../../../components/BlogList.astro";
 
 export async function getStaticPaths() {
   const blogs = await getCollection("blog");
@@ -19,17 +20,10 @@ export async function getStaticPaths() {
 const { tag } = Astro.props;
 const blogs = await getCollection("blog");
 const filteredBlogs = blogs.filter((blog) => blog.data.tags.includes(tag));
+
+const pageTitle = tag;
 ---
 
-<BaseLayout>
-  <h1>{tag}</h1>
-  <ul>
-    {
-      filteredBlogs.map((blog) => (
-        <li key={blog.slug}>
-          <a href={`/blog/${blog.slug}`}>{blog.data.title}</a>
-        </li>
-      ))
-    }
-  </ul>
+<BaseLayout pageTitle={pageTitle}>
+  <BlogList blogList={filteredBlogs} />
 </BaseLayout>

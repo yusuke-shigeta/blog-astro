@@ -1,13 +1,13 @@
 ---
-const { blogCollections } = Astro.props;
+const { blogList } = Astro.props;
 ---
 
 <ul class="blogs">
   {
-    blogCollections.map((blogCollection) => (
+    blogList.map((blogItem) => (
       <li>
-        <a href={`/blog/${blogCollection.slug}`}>
-          <p>{blogCollection.data.title}</p>
+        <a href={`/blog/${blogItem.slug}`}>
+          <p>{blogItem.data.title}</p>
         </a>
       </li>
     ))
