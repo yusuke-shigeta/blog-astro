@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../../layouts/BaseLayout.astro";
-import TagItem from "../../../components/TagItem.astro";
+import TagList from "../../../components/TagList.astro";
 
 const blogs = await getCollection("blog");
 const tagsSet = new Set();
@@ -18,15 +18,5 @@ const pageTitle = "Tag";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <ul>
-    <TagItem tags={tags} />
-  </ul>
+  <TagList tags={tags} />
 </BaseLayout>
-
-<style>
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-</style>

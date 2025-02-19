@@ -1,22 +1,12 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-import TagItem from "../components/TagItem.astro";
+import TagList from "../components/TagList.astro";
 const { date, title, description, tags } = Astro.props;
 ---
 
 <BaseLayout pageTitle={title}>
   <p><em>{description}</em></p>
   <p>{date.toISOString().slice(0, 10)}</p>
-  <ul class="tags">
-    <TagItem tags={tags} />
-  </ul>
+  <TagList tags={tags} />
   <slot />
 </BaseLayout>
-
-<style>
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-</style>
