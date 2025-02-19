@@ -1,0 +1,84 @@
+---
+date: 2025-02-20
+update: 2025-02-20
+title: "blog-astroのファイルとディレクトリの構造をまとめる"
+description: "このリポジトリのファイル構造"
+thumbnail: "astro_thumb.jpg"
+tags: ["astro"]
+---
+
+## FILE.md について
+
+各ディレクトリ, ファイルの説明
+
+## fileList
+
+```
+assets
+components
+  BlogList.astro
+  Footer.astro
+  Header.astro
+  Navigation.astro
+  Social.astro
+  TagList.astro
+  Toc.astro
+content
+  blog
+    blog-astro-file-structure.mdx
+    post-1.mdx
+    post-2.mdx
+  config.ts
+layouts
+  BaseLayout.astro
+  BlogLayout.astro
+pages
+  blog
+    tags
+      [tags].astro
+      index.astro
+    [slug].astro
+    index.astro
+  about.astro
+  index.astro
+script
+  menu.js
+styles
+  global.css
+```
+
+## ディレクトリ
+
+### assets
+
+- 画像ファイルなどはここに保存。多分
+- 今のところ未使用
+
+### components
+
+- コンポーネント
+- 共通パーツ
+- エレメント
+
+### content
+
+- ページ管理ではなくコンテンツ管理
+- content collection
+
+### content/blog
+
+- ブログの投稿はここで作成
+
+### layouts
+
+### pages
+
+### pages/blog
+
+### pages/blog/tags
+
+### script
+
+### styles
+
+## ファイル
