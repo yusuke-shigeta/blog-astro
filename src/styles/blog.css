@@ -1,19 +1,5 @@
 main {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: start;
-}
-
-main > nav {
-  flex: 0 0 25%;
-}
-
-main > nav > ul {
-  left: 50%;
-}
-
-main > div {
-  flex: 0 1 75%;
 }
 
 h1 {
@@ -26,4 +12,13 @@ h2 {
 
 h3 {
   padding: 12px 4px 10px;
+}
+
+.contents {
+  flex: 0 1 75%;
+}
+
+.sidebar {
+  flex: 0 0 25%;
+  justify-items: center;
 }

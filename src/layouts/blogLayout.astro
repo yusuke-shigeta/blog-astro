@@ -7,12 +7,14 @@ const { date, title, description, tags, headings } = Astro.props;
 ---
 
 <BaseLayout pageTitle={title}>
-  <Toc headings={headings} />
-  <div>
+  <div class="contents">
     <h1>{title}</h1>
     <p><em>{description}</em></p>
     <p>{date.toISOString().slice(0, 10)}</p>
     <TagList tags={tags} />
     <slot />
+  </div>
+  <div class="sidebar">
+    <Toc headings={headings} />
   </div>
 </BaseLayout>
