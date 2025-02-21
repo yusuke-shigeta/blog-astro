@@ -15,11 +15,7 @@ const { pageTitle, mainColor } = Astro.props;
     <title>{pageTitle}</title>
   </head>
   <body>
-    <Header />
-    <main>
-      <slot />
-    </main>
-    <Footer />
+    <slot />
   </body>
 </html>
 

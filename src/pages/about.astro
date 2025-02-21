@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import PageLayout from "../layouts/PageLayout.astro";
 
 const pageTitle = "ABOUT";
 
@@ -21,7 +21,7 @@ const finished = true;
 const goal = 3;
 ---
 
-<BaseLayout pageTitle={pageTitle} mainColor={mainColor}>
+<PageLayout>
   <h2>head2</h2>
   <h2>head3</h2>
   <h2>head4</h2>
@@ -52,4 +52,4 @@ const goal = 3;
   {happy && <p>happyをレンダリング</p>}
   {finished && <p>finishedをレンダリング</p>}
   {goal === 3 && <p>goalをレンダリング</p>}
-</BaseLayout>
+</PageLayout>
