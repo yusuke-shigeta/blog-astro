@@ -20,17 +20,11 @@ const { pageTitle, mainColor } = Astro.props;
       <slot />
     </main>
     <Footer />
-    <script>
-      import "../script/menu.js";
-    </script>
   </body>
 </html>
 
 <style define:vars={{ mainColor }}>
   h1 {
     color: var(--mainColor);
-  }
-  .skill {
-    color: #000;
   }
 </style>

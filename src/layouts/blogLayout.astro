@@ -3,15 +3,15 @@ import BaseLayout from "./BaseLayout.astro";
 import Toc from "../components/Toc.astro";
 import TagList from "../components/TagList.astro";
 import "../styles/blog.css";
-const { date, title, description, tags, headings } = Astro.props;
+const { blog, headings } = Astro.props;
 ---
 
-<BaseLayout pageTitle={title}>
+<BaseLayout>
   <div class="contents">
-    <h1>{title}</h1>
-    <p><em>{description}</em></p>
-    <p>{date.toISOString().slice(0, 10)}</p>
-    <TagList tags={tags} />
+    <h1>{blog.title}</h1>
+    <p><em>{blog.description}</em></p>
+    <p>{blog.date.toISOString().slice(0, 10)}</p>
+    <TagList tags={blog.tags} />
     <slot />
   </div>
   <div class="sidebar">

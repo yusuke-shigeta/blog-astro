@@ -1,7 +1,7 @@
 ---
 date: 2025-02-20
 update: 2025-02-20
-title: "blog-astroのファイルとディレクトリの構造をまとめる"
+title: "blog-astroのファイルとディレクトリの構造"
 description: "このリポジトリのファイル構造"
 thumbnail: "astro_thumb.jpg"
 tags: ["astro"]
@@ -11,40 +11,42 @@ tags: ["astro"]
 
 各ディレクトリ, ファイルの説明
 
-## fileList
+content の説明は除く
+
+## ファイル構造
 
 ```
-assets
-components
-  BlogList.astro
-  Footer.astro
-  Header.astro
-  Navigation.astro
-  Social.astro
-  TagList.astro
-  Toc.astro
-content
-  blog
-    blog-astro-file-structure.mdx
-    post-1.mdx
-    post-2.mdx
-  config.ts
-layouts
-  BaseLayout.astro
-  BlogLayout.astro
-pages
-  blog
-    tags
-      [tags].astro
-      index.astro
-    [slug].astro
-    index.astro
-  about.astro
-  index.astro
-script
-  menu.js
-styles
-  global.css
+- assets
+- components
+  - BlogList.astro
+  - Footer.astro
+  - Header.astro
+  - Navigation.astro
+  - Social.astro
+  - TagList.astro
+  - Toc.astro
+- content
+  - blog
+    - blog-astro-file-structure.mdx
+    - post-1.mdx
+    - post-2.mdx
+  - config.ts
+- layouts
+  - BaseLayout.astro
+  - BlogLayout.astro
+- pages
+  - blog
+    - tags
+      - [tags].astro
+      - index.astro
+    - [slug].astro
+    - index.astro
+  - about.astro
+  - index.astro
+- script
+  - menu.js
+- styles
+  - global.css
 ```
 
 ## ディレクトリ
@@ -71,14 +73,98 @@ styles
 
 ### layouts
 
+- 共通レイアウト
+- 二つ以上同じレイアウトのページを作成する場合
+
 ### pages
+
+- ページ追加用
+- コンテンツ管理の場合ルーティングさせてあげる
 
 ### pages/blog
 
+- blog コンテンツを管理
+
 ### pages/blog/tags
+
+- blog のタグを管理
 
 ### script
 
+- 共通 script
+  - script はコンポーネントに書かないの？
+
 ### styles
 
+- 共通 style
+- 共通 style より、コンポーネントの style の方が上書きされる？
+
 ## ファイル
+
+### src/components/BlogList.astro
+
+- blog コンテンツをループ処理
+- このコンポーネントを使用しているファイル:
+  - src/pages/blog/index.astro
+  - src/pages/blog/tag/[tag].astro
+
+### src/components/Footer.astro
+
+- 共通フッター
+- このコンポーネントを使用しているファイル:
+  - src/layouts/BaseLayout.astro
+
+### src/components/Header.astro
+
+- 共通ヘッダー
+- このコンポーネントを使用しているファイル:
+  - src/layouts/BaseLayout.astro
+
+### src/components/Navigation.astro
+
+- 各ページへの導線
+- このコンポーネントを使用しているファイル:
+  - src/components/Header.astro
+
+### src/components/TagList.astro
+
+- blog コンテンツのタグをループ処理
+- このコンポーネントを使用しているファイル:
+  - src/layouts/blogLayout.astro
+  - src/pages/blog/tag/index.astro
+
+### src/components/Toc.astro
+
+- このコンポーネントを使用しているファイル:
+
+### src/layouts/BaseLayout.astro
+
+- このレイアウトを使用しているファイル:
+
+### src/layouts/blogLayout.astro
+
+- このレイアウトを使用しているファイル:
+
+### src/pages/about.astro
+
+- URL:
+
+### src/pages/index.astro
+
+- URL:
+
+### src/pages/blog/[slug].astro
+
+- URL:
+
+### src/pages/blog/index.astro
+
+- URL:
+
+### src/pages/blog/tag/[tag].astro
+
+- URL:
+
+### src/pages/blog/tag/index.astro
+
+- URL:
