@@ -2,23 +2,10 @@ main {
   display: flex;
 }
 
-h1 {
-  padding: 36px 4px 14px;
-}
-
 h2 {
   padding: 24px 4px 12px;
 }
 
 h3 {
   padding: 12px 4px 10px;
-}
-
-.contents {
-  flex: 0 1 75%;
-}
-
-.sidebar {
-  flex: 0 0 25%;
-  justify-items: center;
 }
