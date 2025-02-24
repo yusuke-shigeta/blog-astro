@@ -2,11 +2,13 @@
 import BaseLayout from "./BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
+const { pageTitle } = Astro.props;
 ---
 
 <BaseLayout>
-  <Header />
-  <main>
+  <Header pageTitle={pageTitle} />
+  <main class="main">
     <slot />
   </main>
   <Footer />

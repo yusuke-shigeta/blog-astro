@@ -1,15 +1,38 @@
 ---
-import Navigation from "./Navigation.astro";
+import NavList from "./NavList.astro";
+
+const { pageTitle } = Astro.props;
 ---
 
-<header>
+<header class="header">
+  <h1 class="title">{pageTitle}</h1>
   <nav>
-    <Navigation />
+    <NavList />
   </nav>
 </header>
 
 <style>
-  header {
-    padding: 20px 0;
+  .header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px 14px;
+    margin: 0 auto;
+    background: #fff;
+  }
+
+  .title {
+    flex: 0 0 75%;
+  }
+
+  nav {
+    flex: 0 1 25%;
   }
 </style>
