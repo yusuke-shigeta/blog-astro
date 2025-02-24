@@ -1,6 +1,6 @@
 ---
 import { getCollection } from "astro:content";
-import BaseLayout from "../../../layouts/BaseLayout.astro";
+import PageLayout from "../../../layouts/PageLayout.astro";
 import BlogList from "../../../components/BlogList.astro";
 
 export async function getStaticPaths() {
@@ -24,6 +24,6 @@ const filteredBlogs = blogs.filter((blog) => blog.data.tags.includes(tag));
 const pageTitle = tag;
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<PageLayout pageTitle={pageTitle}>
   <BlogList blogList={filteredBlogs} />
-</BaseLayout>
+</PageLayout>

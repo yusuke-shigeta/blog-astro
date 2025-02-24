@@ -1,6 +1,6 @@
 ---
 date: 2025-02-20
-update: 2025-02-20
+update: 2025-02-24
 title: "blog-astroのファイルとディレクトリの構造"
 description: "このリポジトリのファイル構造"
 thumbnail: "astro_thumb.jpg"
@@ -34,6 +34,7 @@ content の説明は除く
 - layouts
   - BaseLayout.astro
   - BlogLayout.astro
+  - PageLayout.astro
 - pages
   - blog
     - tags
@@ -103,71 +104,91 @@ content の説明は除く
 
 ### src/components/BlogList.astro
 
-- blog コンテンツをループ処理
 - このコンポーネントを使用しているファイル:
   - src/pages/blog/index.astro
   - src/pages/blog/tag/[tag].astro
+- blog コンテンツをループ処理
 
 ### src/components/Footer.astro
 
-- 共通フッター
 - このコンポーネントを使用しているファイル:
   - src/layouts/BaseLayout.astro
+- 共通フッター
 
 ### src/components/Header.astro
 
-- 共通ヘッダー
 - このコンポーネントを使用しているファイル:
   - src/layouts/BaseLayout.astro
+- 共通ヘッダー
 
 ### src/components/Navigation.astro
 
-- 各ページへの導線
 - このコンポーネントを使用しているファイル:
   - src/components/Header.astro
+- 各ページへの導線
 
 ### src/components/TagList.astro
 
-- blog コンテンツのタグをループ処理
 - このコンポーネントを使用しているファイル:
   - src/layouts/blogLayout.astro
   - src/pages/blog/tag/index.astro
+- blog コンテンツのタグをループ処理
 
 ### src/components/Toc.astro
 
-- blog コンテンツの 目次
-  - 表示する深さは h5 まで
 - このコンポーネントを使用しているファイル:
   - src/layouts/BlogLayout.astro
+- blog コンテンツの 目次
+  - 表示する深さは h5 まで
 
 ### src/layouts/BaseLayout.astro
 
 - このレイアウトを使用しているファイル:
+  - src/layouts/BlogLayout.astro
+  - src/layouts/PageLayout.astro
 
-### src/layouts/blogLayout.astro
+### src/layouts/BlogLayout.astro
 
 - このレイアウトを使用しているファイル:
+  - src/pages/blog/[slug].astro
+- このファイル要らないか？
+
+### src/layouts/PageLayout.astro
+
+- このレイアウトを使用しているファイル:
+  - src/pages/about.astro
+  - src/pages/index.astro
+  - src/pages/blog/index.astro
+  - src/pages/blog/tag/[tag].astro
+  - src/pages/blog/tag/index.astro
+- とりあえずページの Layout
 
 ### src/pages/about.astro
 
-- URL:
+- URL: /about/
+- プロフィール
 
 ### src/pages/index.astro
 
-- URL:
+- URL: /
+- トップページ
 
 ### src/pages/blog/[slug].astro
 
-- URL:
+- URL: /blog/[slug]
+- ブログ記事ページ
 
 ### src/pages/blog/index.astro
 
-- URL:
+- URL: /blog/
+- ブログ記事一覧ページ
 
 ### src/pages/blog/tag/[tag].astro
 
-- URL:
+- URL: /blog/tag/[tag]
+- ブログタグに関連する記事一覧ページ
 
 ### src/pages/blog/tag/index.astro
 
-- URL:
+- URL: /blog/tag/
+- ブログタグ一覧ページ

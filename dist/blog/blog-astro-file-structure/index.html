@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="ja" data-astro-cid-37fxchfa style=""> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.2.5"><title></title><style>h1,h2,h3,h4,h5,h6,p,ul,li{padding:0;margin:0;font-weight:400}*{box-sizing:border-box;font-size:16px}html{background-color:#fff;font-family:sans-serif;font-size:.26666666666666666vw}body{margin:0 auto;width:100%;max-width:1200px;padding:0 14px;line-height:1.4}ul{list-style:none}h1,h2,h3,h4,h5,h6{font-weight:700}h1{font-size:24px}h2{font-size:20px}h3{font-size:18px}@media screen and (min-width: 636px){html{font-size:65%}}h1[data-astro-cid-37fxchfa]{color:var(--mainColor)}
-footer[data-astro-cid-sz7xmlte]{display:flex;gap:1rem}
+<!DOCTYPE html><html lang="ja" data-astro-cid-37fxchfa style=""> <head><meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v5.2.5"><title></title><style>h1,h2,h3,h4,h5,h6,p,ul,li{padding:0;margin:0;font-weight:400}*{box-sizing:border-box;font-size:16px}html{background-color:#fff;font-family:sans-serif;font-size:.26666666666666666vw}body{margin:0 auto;width:100%;max-width:1200px;padding:0 14px;line-height:1.4}ul{list-style:none}h1,h2,h3,h4,h5,h6{font-weight:700}h1{font-size:24px}h2{font-size:20px}h3{font-size:18px}@media screen and (min-width: 636px){html{font-size:65%}}h1[data-astro-cid-37fxchfa]{color:var(--mainColor)}footer[data-astro-cid-sz7xmlte]{display:flex;gap:1rem}
 .toc[data-astro-cid-6t6zfk7k]{position:sticky}.depth-3[data-astro-cid-6t6zfk7k]{margin:0 0 0 10px}.depth-4[data-astro-cid-6t6zfk7k]{margin:0 0 0 20px}main{display:flex}h2{padding:24px 4px 12px}h3{padding:12px 4px 10px}.header[data-astro-cid-4dqtj3le]{position:fixed;top:0;left:0;width:100%;padding:20px 14px;background:#fff}.contents[data-astro-cid-4dqtj3le]{flex:0 1 75%}.sidebar[data-astro-cid-4dqtj3le]{flex:0 0 25%;justify-items:center}
 .tags[data-astro-cid-lga65v7i]{display:flex;flex-wrap:wrap;gap:10px}
 </style></head> <body data-astro-cid-37fxchfa style="">  <header class="header" data-astro-cid-4dqtj3le> <h1 data-astro-cid-4dqtj3le>blog-astroのファイルとディレクトリの構造</h1> </header> <main class="main" data-astro-cid-4dqtj3le> <div class="contents" data-astro-cid-4dqtj3le> <p data-astro-cid-4dqtj3le><em data-astro-cid-4dqtj3le>このリポジトリのファイル構造</em></p> <p data-astro-cid-4dqtj3le>2025-02-20</p> <ul class="tags" data-astro-cid-lga65v7i> <li class="tag" data-astro-cid-lga65v7i> <a href="/blog/tag/astro" data-astro-cid-lga65v7i>astro</a> </li> </ul>   <h2 id="filemd-について">FILE.md について</h2>
@@ -24,6 +23,7 @@ footer[data-astro-cid-sz7xmlte]{display:flex;gap:1rem}
 <span class="line"><span>- layouts</span></span>
 <span class="line"><span>  - BaseLayout.astro</span></span>
 <span class="line"><span>  - BlogLayout.astro</span></span>
+<span class="line"><span>  - PageLayout.astro</span></span>
 <span class="line"><span>- pages</span></span>
 <span class="line"><span>  - blog</span></span>
 <span class="line"><span>    - tags</span></span>
@@ -92,93 +92,122 @@ footer[data-astro-cid-sz7xmlte]{display:flex;gap:1rem}
 <h2 id="ファイル">ファイル</h2>
 <h3 id="srccomponentsbloglistastro">src/components/BlogList.astro</h3>
 <ul>
-<li>blog コンテンツをループ処理</li>
 <li>このコンポーネントを使用しているファイル:
 <ul>
 <li>src/pages/blog/index.astro</li>
 <li>src/pages/blog/tag/[tag].astro</li>
 </ul>
 </li>
+<li>blog コンテンツをループ処理</li>
 </ul>
 <h3 id="srccomponentsfooterastro">src/components/Footer.astro</h3>
 <ul>
-<li>共通フッター</li>
 <li>このコンポーネントを使用しているファイル:
 <ul>
 <li>src/layouts/BaseLayout.astro</li>
 </ul>
 </li>
+<li>共通フッター</li>
 </ul>
 <h3 id="srccomponentsheaderastro">src/components/Header.astro</h3>
 <ul>
-<li>共通ヘッダー</li>
 <li>このコンポーネントを使用しているファイル:
 <ul>
 <li>src/layouts/BaseLayout.astro</li>
 </ul>
 </li>
+<li>共通ヘッダー</li>
 </ul>
 <h3 id="srccomponentsnavigationastro">src/components/Navigation.astro</h3>
 <ul>
-<li>各ページへの導線</li>
 <li>このコンポーネントを使用しているファイル:
 <ul>
 <li>src/components/Header.astro</li>
 </ul>
 </li>
+<li>各ページへの導線</li>
 </ul>
 <h3 id="srccomponentstaglistastro">src/components/TagList.astro</h3>
 <ul>
-<li>blog コンテンツのタグをループ処理</li>
 <li>このコンポーネントを使用しているファイル:
 <ul>
 <li>src/layouts/blogLayout.astro</li>
 <li>src/pages/blog/tag/index.astro</li>
 </ul>
 </li>
+<li>blog コンテンツのタグをループ処理</li>
 </ul>
 <h3 id="srccomponentstocastro">src/components/Toc.astro</h3>
 <ul>
-<li>blog コンテンツの 目次
-<ul>
-<li>表示する深さは h5 まで</li>
-</ul>
-</li>
 <li>このコンポーネントを使用しているファイル:
 <ul>
 <li>src/layouts/BlogLayout.astro</li>
 </ul>
 </li>
+<li>blog コンテンツの 目次
+<ul>
+<li>表示する深さは h5 まで</li>
+</ul>
+</li>
 </ul>
 <h3 id="srclayoutsbaselayoutastro">src/layouts/BaseLayout.astro</h3>
 <ul>
-<li>このレイアウトを使用しているファイル:</li>
-</ul>
-<h3 id="srclayoutsbloglayoutastro">src/layouts/blogLayout.astro</h3>
+<li>このレイアウトを使用しているファイル:
 <ul>
-<li>このレイアウトを使用しているファイル:</li>
+<li>src/layouts/BlogLayout.astro</li>
+<li>src/layouts/PageLayout.astro</li>
+</ul>
+</li>
+</ul>
+<h3 id="srclayoutsbloglayoutastro">src/layouts/BlogLayout.astro</h3>
+<ul>
+<li>このレイアウトを使用しているファイル:
+<ul>
+<li>src/pages/blog/[slug].astro</li>
+</ul>
+</li>
+<li>このファイル要らないか？</li>
+</ul>
+<h3 id="srclayoutspagelayoutastro">src/layouts/PageLayout.astro</h3>
+<ul>
+<li>このレイアウトを使用しているファイル:
+<ul>
+<li>src/pages/about.astro</li>
+<li>src/pages/index.astro</li>
+<li>src/pages/blog/index.astro</li>
+<li>src/pages/blog/tag/[tag].astro</li>
+<li>src/pages/blog/tag/index.astro</li>
+</ul>
+</li>
+<li>とりあえずページの Layout</li>
 </ul>
 <h3 id="srcpagesaboutastro">src/pages/about.astro</h3>
 <ul>
-<li>URL:</li>
+<li>URL: /about/</li>
+<li>プロフィール</li>
 </ul>
 <h3 id="srcpagesindexastro">src/pages/index.astro</h3>
 <ul>
-<li>URL:</li>
+<li>URL: /</li>
+<li>トップページ</li>
 </ul>
 <h3 id="srcpagesblogslugastro">src/pages/blog/[slug].astro</h3>
 <ul>
-<li>URL:</li>
+<li>URL: /blog/[slug]</li>
+<li>ブログ記事ページ</li>
 </ul>
 <h3 id="srcpagesblogindexastro">src/pages/blog/index.astro</h3>
 <ul>
-<li>URL:</li>
+<li>URL: /blog/</li>
+<li>ブログ記事一覧ページ</li>
 </ul>
 <h3 id="srcpagesblogtagtagastro">src/pages/blog/tag/[tag].astro</h3>
 <ul>
-<li>URL:</li>
+<li>URL: /blog/tag/[tag]</li>
+<li>ブログタグに関連する記事一覧ページ</li>
 </ul>
 <h3 id="srcpagesblogtagindexastro">src/pages/blog/tag/index.astro</h3>
 <ul>
-<li>URL:</li>
-</ul>  </div> <div class="sidebar" data-astro-cid-4dqtj3le> <nav class="toc" data-astro-cid-6t6zfk7k> <ul data-astro-cid-6t6zfk7k> <li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#filemd-について" data-astro-cid-6t6zfk7k>FILE.md について</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#ファイル構造" data-astro-cid-6t6zfk7k>ファイル構造</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#ディレクトリ" data-astro-cid-6t6zfk7k>ディレクトリ</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#assets" data-astro-cid-6t6zfk7k>assets</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#components" data-astro-cid-6t6zfk7k>components</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#content" data-astro-cid-6t6zfk7k>content</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#contentblog" data-astro-cid-6t6zfk7k>content/blog</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#layouts" data-astro-cid-6t6zfk7k>layouts</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#pages" data-astro-cid-6t6zfk7k>pages</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#pagesblog" data-astro-cid-6t6zfk7k>pages/blog</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#pagesblogtags" data-astro-cid-6t6zfk7k>pages/blog/tags</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#script" data-astro-cid-6t6zfk7k>script</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#styles" data-astro-cid-6t6zfk7k>styles</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#ファイル" data-astro-cid-6t6zfk7k>ファイル</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentsbloglistastro" data-astro-cid-6t6zfk7k>src/components/BlogList.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentsfooterastro" data-astro-cid-6t6zfk7k>src/components/Footer.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentsheaderastro" data-astro-cid-6t6zfk7k>src/components/Header.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentsnavigationastro" data-astro-cid-6t6zfk7k>src/components/Navigation.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentstaglistastro" data-astro-cid-6t6zfk7k>src/components/TagList.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentstocastro" data-astro-cid-6t6zfk7k>src/components/Toc.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srclayoutsbaselayoutastro" data-astro-cid-6t6zfk7k>src/layouts/BaseLayout.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srclayoutsbloglayoutastro" data-astro-cid-6t6zfk7k>src/layouts/blogLayout.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesaboutastro" data-astro-cid-6t6zfk7k>src/pages/about.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesindexastro" data-astro-cid-6t6zfk7k>src/pages/index.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesblogslugastro" data-astro-cid-6t6zfk7k>src/pages/blog/[slug].astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesblogindexastro" data-astro-cid-6t6zfk7k>src/pages/blog/index.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesblogtagtagastro" data-astro-cid-6t6zfk7k>src/pages/blog/tag/[tag].astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesblogtagindexastro" data-astro-cid-6t6zfk7k>src/pages/blog/tag/index.astro</a> </li> </ul> </nav>  </div> </main> <footer data-astro-cid-sz7xmlte>フッター</footer>   <script type="module">const t=document.querySelector(".header"),o=document.querySelector(".main"),n=document.querySelector(".toc");document.addEventListener("DOMContentLoaded",()=>{c()});function c(){if(t){const e=t.offsetHeight;o.style.marginTop=`${e}px`,n.style.top=`${e+24}px`}}</script>  </body></html>
+<li>URL: /blog/tag/</li>
+<li>ブログタグ一覧ページ</li>
+</ul>  </div> <div class="sidebar" data-astro-cid-4dqtj3le> <nav class="toc" data-astro-cid-6t6zfk7k> <ul data-astro-cid-6t6zfk7k> <li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#filemd-について" data-astro-cid-6t6zfk7k>FILE.md について</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#ファイル構造" data-astro-cid-6t6zfk7k>ファイル構造</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#ディレクトリ" data-astro-cid-6t6zfk7k>ディレクトリ</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#assets" data-astro-cid-6t6zfk7k>assets</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#components" data-astro-cid-6t6zfk7k>components</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#content" data-astro-cid-6t6zfk7k>content</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#contentblog" data-astro-cid-6t6zfk7k>content/blog</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#layouts" data-astro-cid-6t6zfk7k>layouts</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#pages" data-astro-cid-6t6zfk7k>pages</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#pagesblog" data-astro-cid-6t6zfk7k>pages/blog</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#pagesblogtags" data-astro-cid-6t6zfk7k>pages/blog/tags</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#script" data-astro-cid-6t6zfk7k>script</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#styles" data-astro-cid-6t6zfk7k>styles</a> </li><li class="depth-2" data-astro-cid-6t6zfk7k> <a href="#ファイル" data-astro-cid-6t6zfk7k>ファイル</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentsbloglistastro" data-astro-cid-6t6zfk7k>src/components/BlogList.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentsfooterastro" data-astro-cid-6t6zfk7k>src/components/Footer.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentsheaderastro" data-astro-cid-6t6zfk7k>src/components/Header.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentsnavigationastro" data-astro-cid-6t6zfk7k>src/components/Navigation.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentstaglistastro" data-astro-cid-6t6zfk7k>src/components/TagList.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srccomponentstocastro" data-astro-cid-6t6zfk7k>src/components/Toc.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srclayoutsbaselayoutastro" data-astro-cid-6t6zfk7k>src/layouts/BaseLayout.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srclayoutsbloglayoutastro" data-astro-cid-6t6zfk7k>src/layouts/BlogLayout.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srclayoutspagelayoutastro" data-astro-cid-6t6zfk7k>src/layouts/PageLayout.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesaboutastro" data-astro-cid-6t6zfk7k>src/pages/about.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesindexastro" data-astro-cid-6t6zfk7k>src/pages/index.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesblogslugastro" data-astro-cid-6t6zfk7k>src/pages/blog/[slug].astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesblogindexastro" data-astro-cid-6t6zfk7k>src/pages/blog/index.astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesblogtagtagastro" data-astro-cid-6t6zfk7k>src/pages/blog/tag/[tag].astro</a> </li><li class="depth-3" data-astro-cid-6t6zfk7k> <a href="#srcpagesblogtagindexastro" data-astro-cid-6t6zfk7k>src/pages/blog/tag/index.astro</a> </li> </ul> </nav>  </div> </main> <footer data-astro-cid-sz7xmlte>フッター</footer>   <script type="module">const t=document.querySelector(".header"),o=document.querySelector(".main"),n=document.querySelector(".toc");document.addEventListener("DOMContentLoaded",()=>{c()});function c(){if(t){const e=t.offsetHeight;o.style.marginTop=`${e}px`,n.style.top=`${e+24}px`}}</script>  </body></html>
