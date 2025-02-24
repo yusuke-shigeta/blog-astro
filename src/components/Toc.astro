@@ -16,7 +16,9 @@ const updateHeadings = filteredHeadings.map((heading) => {
     {
       updateHeadings.map((heading) => (
         <li class={heading.class}>
-          <a href={`#${heading.slug}`}>{heading.text}</a>
+          <a class="toc-link" href={`#${heading.slug}`}>
+            {heading.text}
+          </a>
         </li>
       ))
     }
@@ -26,6 +28,10 @@ const updateHeadings = filteredHeadings.map((heading) => {
 <style>
   .toc {
     position: sticky;
+  }
+
+  .toc-link {
+    word-break: break-all;
   }
 
   .depth-3 {
