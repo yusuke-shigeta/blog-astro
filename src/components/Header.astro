@@ -1,14 +1,12 @@
 ---
-import NavList from "./NavList.astro";
+import Navs from "./Navs.astro";
 
 const { pageTitle } = Astro.props;
 ---
 
 <header class="header">
   <h1 class="title">{pageTitle}</h1>
-  <nav>
-    <NavList />
-  </nav>
+  <Navs />
 </header>
 
 <style>
