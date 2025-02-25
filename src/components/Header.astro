@@ -12,6 +12,7 @@ const { pageTitle } = Astro.props;
 <style>
   .header {
     position: fixed;
+    z-index: 999;
     top: 0;
     right: 0;
     left: 0;
@@ -21,7 +22,7 @@ const { pageTitle } = Astro.props;
     gap: 0 20px;
     width: 100%;
     max-width: 1200px;
-    padding: 20px 14px;
+    padding: 12px 14px;
     margin: 0 auto;
     background: #fff;
     box-shadow:
@@ -31,9 +32,5 @@ const { pageTitle } = Astro.props;
 
   .title {
     flex: 0 0 75%;
-  }
-
-  nav {
-    flex: 0 1 25%;
   }
 </style>

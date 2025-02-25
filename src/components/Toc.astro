@@ -11,27 +11,34 @@ const updateHeadings = filteredHeadings.map((heading) => {
 });
 ---
 
-<nav class="toc">
-  <ul>
-    {
-      updateHeadings.map((heading) => (
-        <li class={heading.class}>
-          <a class="toc-link" href={`#${heading.slug}`}>
-            {heading.text}
-          </a>
-        </li>
-      ))
-    }
-  </ul>
-</nav>
+<ul class="tocs">
+  {
+    updateHeadings.map((heading) => (
+      <li class={`${heading.class} toc`}>
+        <a class="toc-link" href={`#${heading.slug}`}>
+          {heading.text}
+        </a>
+      </li>
+    ))
+  }
+</ul>
 
 <style>
-  .toc {
+  .tocs {
     position: sticky;
+    height: 600px;
+    overflow: scroll;
+  }
+
+  .toc:hover .toc-link {
+    font-weight: bold;
   }
 
   .toc-link {
     word-break: break-all;
+    color: rgb(0 0 0 / 60%);
+    font-size: 14px;
+    text-decoration: none;
   }
 
   .depth-3 {

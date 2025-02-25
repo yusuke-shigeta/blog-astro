@@ -12,9 +12,9 @@ const { blog, headings } = Astro.props;
   <Header pageTitle={blog.data.title} />
   <main class="main">
     <div class="contents">
-      <p class="date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>
-      {blog.data.update && <p class="date">更新日: {blog.data.update.toISOString().slice(0, 10)}</p>}
       <Tags tags={blog.data.tags} />
+      <p class="blog-date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>
+      {blog.data.update && <p class="blog-update">更新日: {blog.data.update.toISOString().slice(0, 10)}</p>}
       <slot />
     </div>
     <div class="sidebar">
@@ -22,17 +22,6 @@ const { blog, headings } = Astro.props;
     </div>
   </main>
   <Footer />
-
-  <style>
-    .contents {
-      flex: 0 0 75%;
-    }
-
-    .sidebar {
-      flex: 0 1 25%;
-      justify-items: center;
-    }
-  </style>
 
   <script>
     import "../script/blog.js";

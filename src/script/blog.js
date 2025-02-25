@@ -1,5 +1,5 @@
 const header = document.querySelector(".header");
-const toc = document.querySelector(".toc");
+const toc = document.querySelector(".tocs");
 
 document.addEventListener("DOMContentLoaded", () => {
   adjustTocMargin();
