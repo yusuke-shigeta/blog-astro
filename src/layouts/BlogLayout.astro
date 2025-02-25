@@ -3,7 +3,7 @@ import BaseLayout from "./BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import Toc from "../components/Toc.astro";
-import TagList from "../components/TagList.astro";
+import Tags from "../components/Tags.astro";
 import "../styles/blog.css";
 const { blog, headings } = Astro.props;
 ---
@@ -14,7 +14,7 @@ const { blog, headings } = Astro.props;
     <div class="contents">
       <p class="date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>
       {blog.data.update && <p class="date">更新日: {blog.data.update.toISOString().slice(0, 10)}</p>}
-      <TagList tags={blog.data.tags} />
+      <Tags tags={blog.data.tags} />
       <slot />
     </div>
     <div class="sidebar">

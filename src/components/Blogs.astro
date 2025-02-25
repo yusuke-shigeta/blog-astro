@@ -1,5 +1,5 @@
 ---
-import TagList from "./TagList.astro";
+import Tags from "./Tags.astro";
 
 const { blogs } = Astro.props;
 ---
@@ -13,7 +13,7 @@ const { blogs } = Astro.props;
         </a>
         {blog.data.update ? <p class="blog-update">更新日: {blog.data.update.toISOString().slice(0, 10)}</p> : <p class="blog-date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>}
         <p class="blog-title">{blog.data.title}</p>
-        <TagList tags={blog.data.tags} />
+        <Tags tags={blog.data.tags} />
       </li>
     ))
   }
