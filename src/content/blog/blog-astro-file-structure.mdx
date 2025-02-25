@@ -43,7 +43,10 @@ content の説明は除く
   - about.astro
   - index.astro
 - script
-  - menu.js
+  - components
+    - adjustMainMargin.js
+  - blog.js
+  - global.js
 - styles
   - global.css
 ```
@@ -93,6 +96,10 @@ content の説明は除く
 - 共通 script
   - script はコンポーネントに書かないの？
 
+#### components
+
+- script の共通コンポーネント
+
 ### styles
 
 - 共通 style
@@ -117,6 +124,7 @@ content の説明は除く
 
 - このコンポーネントを使用しているファイル:
   - src/layouts/BaseLayout.astro
+  - src/layouts/PageLayout.astro
 - 共通ヘッダー
 
 ### src/components/NavList.astro
@@ -190,3 +198,18 @@ content の説明は除く
 
 - URL: /blog/tag/
 - ブログタグ一覧ページ
+
+### src/script/components/adjustMainMargin.js
+
+- 使用している js
+  - src/script/global.js
+- なんとなくコンポーネント化
+- main の上部の余白を調整
+
+### src/script/blog.js
+
+- blog ページの共通 js
+
+### src/script/global.js
+
+- ページ全体で読み込む js

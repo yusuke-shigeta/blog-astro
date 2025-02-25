@@ -1,17 +1,8 @@
 const header = document.querySelector(".header");
 const main = document.querySelector(".main");
 
-document.addEventListener("DOMContentLoaded", () => {
-  adjustHeaderMargin();
-});
+import { adjustMainMargin } from "./components/adjustMainMargin";
 
-// *
-// mainとtocの上部の余白を調整
-// headerの高さは可変するため
-// *
-function adjustHeaderMargin() {
-  if (header) {
-    const headerHeight = header.offsetHeight;
-    main.style.marginTop = `${headerHeight}px`;
-  }
-}
+document.addEventListener("DOMContentLoaded", () => {
+  adjustMainMargin(header, main);
+});
