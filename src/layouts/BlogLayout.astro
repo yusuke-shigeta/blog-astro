@@ -9,12 +9,12 @@ const { blog, headings } = Astro.props;
 ---
 
 <BaseLayout>
-  <Header pageTitle={blog.title} />
+  <Header pageTitle={blog.data.title} />
   <main class="main">
     <div class="contents">
-      <p class="date">投稿日: {blog.date.toISOString().slice(0, 10)}</p>
-      {blog.update && <p class="date">更新日: {blog.update.toISOString().slice(0, 10)}</p>}
-      <TagList tags={blog.tags} />
+      <p class="date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>
+      {blog.data.update && <p class="date">更新日: {blog.data.update.toISOString().slice(0, 10)}</p>}
+      <TagList tags={blog.data.tags} />
       <slot />
     </div>
     <div class="sidebar">

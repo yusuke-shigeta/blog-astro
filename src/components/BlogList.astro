@@ -1,15 +1,54 @@
 ---
-const { blogList } = Astro.props;
+import TagList from "./TagList.astro";
+
+const { blogs } = Astro.props;
 ---
 
 <ul class="blogs">
   {
-    blogList.map((blogItem) => (
-      <li>
-        <a href={`/blog/${blogItem.slug}`}>
-          <p>{blogItem.data.title}</p>
+    blogs.map((blog) => (
+      <li class="blog">
+        <a class="blog-link" href={`/blog/${blog.slug}`}>
+          {blog.data.title}
         </a>
+        {blog.data.update ? <p class="blog-update">更新日: {blog.data.update.toISOString().slice(0, 10)}</p> : <p class="blog-date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>}
+        <p class="blog-title">{blog.data.title}</p>
+        <TagList tags={blog.data.tags} />
       </li>
     ))
   }
 </ul>
+
+<style>
+  .blogs {
+    display: grid;
+    gap: 16px;
+  }
+
+  .blog {
+    position: relative;
+    border-radius: 8px;
+    padding: 16px 24px;
+    background-color: #fff;
+  }
+
+  .blog-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  .blog-title {
+    margin: 8px 0;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  .blog-date,
+  .blog-update {
+    font-size: 12px;
+  }
+</style>

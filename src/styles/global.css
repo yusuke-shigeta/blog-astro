@@ -1,4 +1,8 @@
 /* reset: */
+body {
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6, p, ul, li {
   padding: 0;
   margin: 0;
@@ -18,11 +22,11 @@ html {
   font-size: 0.26666666666666666vw;
 }
 
-body {
-  margin: 0 auto;
+main {
   width: 100%;
   max-width: 1200px;
-  padding: 0 14px;
+  padding: 24px 14px 64px;
+  margin: 0 auto;
   line-height: 1.4;
 }
 
