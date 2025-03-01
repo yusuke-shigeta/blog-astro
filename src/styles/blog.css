@@ -13,17 +13,34 @@ h2 {
   margin: 56px 0 16px;
   font-size: 26px;
   line-height: 1.4;
-  /* position: sticky;
-  top: 80px;
-  background-color: #fff; */
 }
 
 h3 {
-  padding: 12px 4px 10px;
-  /* position: sticky;
-  top: 80px;
-  background-color: #fff; */
+  padding: 40px 0 16px;
+  font-size: 22px;
 }
+
+ul {
+  padding-left: 1em;
+}
+
+ul,
+ul ul ul ul ul{
+  list-style-type: disc;
+}
+
+ul ul ul,
+ul ul ul ul ul ul ul {
+  list-style-type: square;
+}
+
+ul ul,
+ul ul ul ul,
+ul ul ul ul ul ul,
+ul ul ul ul ul ul ul ul {
+  list-style-type: circle; 
+}
+
 
 .contents {
   flex: 0 0 75%;
