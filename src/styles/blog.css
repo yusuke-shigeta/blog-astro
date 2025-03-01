@@ -42,11 +42,15 @@ ul ul ul ul ul ul ul ul {
 }
 
 
-.contents {
+.blog {
   flex: 0 0 75%;
+}
+
+.blog-contents {
+  background-color: #fff;
   border-radius: 8px;
   padding: 32px 56px;
-  background-color: #fff;
+  margin: 20px 0 0;
 }
 
 .sidebar {
@@ -54,10 +58,24 @@ ul ul ul ul ul ul ul ul {
   justify-items: center;
 }
 
-.blog-date {
+.blog-data {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 32px 56px;
+}
+
+.blog-data-date {
   margin: 8px 0 0;
 }
 
-.blog-update {
+.blog-data-update {
   margin: 4px 0 0;
+}
+
+.blog-data-description {
+  margin: 12px 0 0;
+}
+
+.blog-contents > *:first-child {
+  margin-top: 0;
 }
