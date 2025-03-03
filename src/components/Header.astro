@@ -5,8 +5,12 @@ const { pageTitle } = Astro.props;
 ---
 
 <header class="header">
-  <h1 class="title">{pageTitle}</h1>
-  <Navs />
+  <div class="header-inner">
+    <a class="header-title" href="/">{pageTitle}</a>
+    <div class="l-navs">
+      <Navs />
+    </div>
+  </div>
 </header>
 
 <style>
@@ -16,21 +20,29 @@ const { pageTitle } = Astro.props;
     top: 0;
     right: 0;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0 20px;
-    width: 100%;
-    max-width: 1200px;
-    padding: 12px 14px;
-    margin: 0 auto;
     background: #fff;
     box-shadow:
       0px 1px 1px 0px rgba(30, 33, 33, 0.25),
       0px 0px 0px 1px rgba(0, 0, 0, 8%);
   }
 
-  .title {
-    flex: 0 0 75%;
+  .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0 20px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 8px 32px;
+    margin: 0 auto;
+  }
+
+  .header-title {
+    border-radius: 4px;
+    padding: 4px 16px;
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    font-size: 18px;
   }
 </style>

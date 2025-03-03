@@ -6,17 +6,21 @@ import Toc from "../components/Toc.astro";
 import Tags from "../components/Tags.astro";
 import "../styles/blog.css";
 const { blog, headings } = Astro.props;
+const pageTitle = "Blog";
 ---
 
 <BaseLayout>
-  <Header pageTitle={blog.data.title} />
+  <Header pageTitle={pageTitle} />
   <main class="main">
     <div class="blog">
       <div class="blog-data">
-        <Tags tags={blog.data.tags} />
+        <h1 class="blog-data-title">{blog.data.title}</h1>
+        <p class="blog-data-description">{blog.data.description}</p>
         <p class="blog-data-date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>
         {blog.data.update && <p class="blog-data-update">更新日: {blog.data.update.toISOString().slice(0, 10)}</p>}
-        <p class="blog-data-description">{blog.data.description}</p>
+        <div class="l-tags">
+          <Tags tags={blog.data.tags} />
+        </div>
       </div>
       <div class="blog-contents">
         <slot />
