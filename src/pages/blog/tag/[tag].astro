@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import PageLayout from "../../../layouts/PageLayout.astro";
-import Blogs from "../../../components/Blogs.astro";
+import Blog from "../../../components/item/Blog.astro";
 
 export async function getStaticPaths() {
   const blogs = await getCollection("blog");
@@ -25,5 +25,16 @@ const pageTitle = tag;
 ---
 
 <PageLayout pageTitle={pageTitle}>
-  <Blogs blogs={filteredBlogs} />
+  <ul class="blogs">
+    <Blog blogs={filteredBlogs} />
+  </ul>
 </PageLayout>
+
+<style>
+  .blogs {
+    display: grid;
+    gap: 16px;
+    padding-left: 0;
+    list-style-type: none;
+  }
+</style>

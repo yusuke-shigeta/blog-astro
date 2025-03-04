@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import PageLayout from "../../../layouts/PageLayout.astro";
-import Tags from "../../../components/Tags.astro";
+import Tag from "../../../components/item/Tag.astro";
 
 const blogs = await getCollection("blog");
 const tagsSet = new Set();
@@ -18,5 +18,5 @@ const pageTitle = "Tag";
 ---
 
 <PageLayout pageTitle={pageTitle}>
-  <Tags tags={tags} />
+  <Tag tags={tags} />
 </PageLayout>
