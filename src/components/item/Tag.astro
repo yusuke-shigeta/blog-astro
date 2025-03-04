@@ -2,26 +2,17 @@
 const { tags } = Astro.props;
 ---
 
-<ul class="tags">
-  {
-    tags.map((tag) => (
-      <li class="tag">
-        <a class="tag-link" href={`/blog/tag/${tag}`}>
-          {tag}
-        </a>
-      </li>
-    ))
-  }
-</ul>
+{
+  tags.map((tag) => (
+    <li class="tag">
+      <a class="tag-link" href={`/blog/tag/${tag}`}>
+        {tag}
+      </a>
+    </li>
+  ))
+}
 
 <style>
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-    padding-left: 0;
-  }
-
   .tag {
     display: flex;
     align-items: center;

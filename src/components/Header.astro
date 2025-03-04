@@ -1,5 +1,5 @@
 ---
-import Navs from "./Navs.astro";
+import Nav from "./item/Nav.astro";
 
 const { pageTitle } = Astro.props;
 ---
@@ -9,53 +9,66 @@ const { pageTitle } = Astro.props;
     <div class="l-header-title">
       <a class="header-title" href="/">{pageTitle}</a>
     </div>
-    <div class="l-navs">
-      <Navs />
-    </div>
+    <nav>
+      <ul class="navs">
+        <Nav href="/" path="" text="Top" />
+        <Nav href="/about/" path="about" text="About" />
+        <Nav href="/blog/" path="blog" text="Blog" />
+      </ul>
+    </nav>
   </div>
+
+  <style>
+    .header {
+      position: fixed;
+      z-index: 999;
+      top: 0;
+      right: 0;
+      left: 0;
+      background: #fff;
+      box-shadow:
+        0px 1px 1px 0px rgba(30, 33, 33, 0.25),
+        0px 0px 0px 1px rgba(0, 0, 0, 8%);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0 20px;
+      width: 100%;
+      height: 46px;
+      max-width: 1200px;
+      padding: 0 14px;
+      margin: 0 auto;
+    }
+
+    .l-header-title {
+      flex: 0 0 75%;
+    }
+
+    .header-title {
+      display: inline-block;
+      border-radius: 4px;
+      padding: 3px 16px;
+      text-decoration: none;
+      background: #000;
+      color: #fff;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    nav {
+      flex: 0 1 25%;
+    }
+
+    .navs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      padding: 0;
+      list-style-type: none;
+      font-size: 14px;
+    }
+  </style>
 </header>
-
-<style>
-  .header {
-    position: fixed;
-    z-index: 999;
-    top: 0;
-    right: 0;
-    left: 0;
-    background: #fff;
-    box-shadow:
-      0px 1px 1px 0px rgba(30, 33, 33, 0.25),
-      0px 0px 0px 1px rgba(0, 0, 0, 8%);
-  }
-
-  .header-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0 20px;
-    width: 100%;
-    height: 46px;
-    max-width: 1200px;
-    padding: 0 14px;
-    margin: 0 auto;
-  }
-
-  .l-header-title {
-    flex: 0 0 75%;
-  }
-
-  .header-title {
-    display: inline-block;
-    border-radius: 4px;
-    padding: 3px 16px;
-    text-decoration: none;
-    background: #000;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-  }
-
-  .l-navs {
-    flex: 0 1 25%;
-  }
-</style>

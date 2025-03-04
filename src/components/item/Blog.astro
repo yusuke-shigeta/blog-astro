@@ -12,7 +12,9 @@ const { blogs } = Astro.props;
       </a>
       {blog.data.update ? <p class="blog-update">更新日: {blog.data.update.toISOString().slice(0, 10)}</p> : <p class="blog-date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>}
       <p class="blog-title">{blog.data.title}</p>
-      <Tag tags={blog.data.tags} />
+      <ul class="tags">
+        <Tag tags={blog.data.tags} />
+      </ul>
     </li>
   ))
 }
@@ -45,5 +47,12 @@ const { blogs } = Astro.props;
   .blog-date,
   .blog-update {
     font-size: 12px;
+  }
+
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding-left: 0;
   }
 </style>

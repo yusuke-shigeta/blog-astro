@@ -1,27 +1,14 @@
 ---
 const currentPath = Astro.url.pathname;
 const firstPath = currentPath.split("/")[1];
+
+const { href, path, text } = Astro.props;
 ---
 
-<nav>
-  <ul class="navs">
-    <li class="nav"><a class={`nav-link ${firstPath === "" ? "active" : ""}`} href="/">Home</a></li>
-    <li class="nav"><a class={`nav-link ${firstPath === "about" ? "active" : ""}`} href="/about/">About</a></li>
-    <li class="nav"><a class={`nav-link ${firstPath === "blog" ? "active" : ""}`} href="/blog/">Blog</a></li>
-  </ul>
-</nav>
+<li class="nav"><a class={`nav-link ${firstPath === path ? "active" : ""}`} href={href}>{text}</a></li>
 
 <style>
-  .navs {
-    display: flex;
-    gap: 12px;
-    padding: 0;
-    list-style-type: none;
-    font-size: 14px;
-  }
-
   .nav {
-    flex: 1;
     text-align: center;
   }
 

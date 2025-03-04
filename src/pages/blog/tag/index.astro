@@ -18,5 +18,16 @@ const pageTitle = "Tag";
 ---
 
 <PageLayout pageTitle={pageTitle}>
-  <Tag tags={tags} />
+  <ul class="tags">
+    <Tag tags={tags} />
+  </ul>
 </PageLayout>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding-left: 0;
+  }
+</style>

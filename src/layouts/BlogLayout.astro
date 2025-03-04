@@ -19,7 +19,9 @@ const pageTitle = "Blog";
         <p class="blog-data-date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>
         {blog.data.update && <p class="blog-data-update">更新日: {blog.data.update.toISOString().slice(0, 10)}</p>}
         <div class="l-tags">
-          <Tag tags={blog.data.tags} />
+          <ul class="tags">
+            <Tag tags={blog.data.tags} />
+          </ul>
         </div>
       </div>
       <div class="blog-contents">
@@ -36,3 +38,12 @@ const pageTitle = "Blog";
     import "../script/blog.js";
   </script>
 </BaseLayout>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding-left: 0;
+  }
+</style>
