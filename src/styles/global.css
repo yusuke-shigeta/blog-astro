@@ -22,6 +22,10 @@ html {
   font-size: 0.26666666666666666vw;
 }
 
+body {
+  background-color: #f5f6f6;
+}
+
 main {
   width: 100%;
   max-width: 1200px;
