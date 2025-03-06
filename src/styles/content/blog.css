@@ -16,6 +16,15 @@ h3 {
   font-size: 22px;
 }
 
+h4 {
+  margin: 20px 0 8px;
+  font-size: 18px;
+}
+
+hr {
+  margin: 16px 0;
+}
+
 ul {
   padding-left: 1em;
 }
@@ -35,6 +44,10 @@ ul ul ul ul,
 ul ul ul ul ul ul,
 ul ul ul ul ul ul ul ul {
   list-style-type: circle; 
+}
+
+ol {
+  padding-left: 2.2rem;
 }
 
 .blog {

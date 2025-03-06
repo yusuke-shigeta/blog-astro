@@ -7,7 +7,7 @@
   - [ファイルジラ手順](#ファイルジラ手順)
   - [shortcut](#shortcut)
   - [astro 環境構築](#astro-環境構築)
-  - [Chrome拡張機能](#chrome拡張機能)
+  - [Chrome 拡張機能](#chrome-拡張機能)
 - [url](#url)
 - [npm コマンド](#npm-コマンド)
 
@@ -32,7 +32,7 @@
 - Astro
 - Git Graph
 - GitHub Theme
-- Markdown All in One (index作成のため)
+- Markdown All in One (index 作成のため)
 
 ## mac 設定
 
@@ -63,7 +63,7 @@
 
 - [基本的に tutorial 通り](https://docs.astro.build/ja/tutorial/1-setup/1/)
 
-## Chrome拡張機能
+## Chrome 拡張機能
 
 - Acid Tabs
   - タブをグループ化
