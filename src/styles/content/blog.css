@@ -50,6 +50,10 @@ ol {
   padding-left: 2.2rem;
 }
 
+code {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
 .blog {
   flex: 0 0 75%;
 }

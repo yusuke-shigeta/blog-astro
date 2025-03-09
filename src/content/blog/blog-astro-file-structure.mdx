@@ -1,5 +1,5 @@
 ---
-status: private
+status: public
 date: 2025-02-20
 update: 2025-02-25
 title: "blog-astroのファイルとディレクトリの構造"
@@ -19,12 +19,12 @@ content の説明は除く
 ```
 - assets
 - components
-  - Blogs.astro
+  - item
+    - Blog.astro
+    - Nav.astro
+    - Tag.astro
   - Footer.astro
   - Header.astro
-  - Navs.astro
-  - Social.astro
-  - Tags.astro
   - Toc.astro
 - content
   - blog
@@ -49,6 +49,12 @@ content の説明は除く
   - blog.js
   - global.js
 - styles
+  - content
+    - blog.css
+  - pages
+    - about.css
+    - blog.css
+    - index.css
   - global.css
 ```
 
@@ -64,6 +70,12 @@ content の説明は除く
 - コンポーネント
 - 共通パーツ
 - エレメント
+
+### components/item
+
+- item 要素のコンポーネント
+- ファイル名だけではなんのコンポーネントなのか分かりづらいため、item ディレクトリを作成した感じ
+- Blogs, Navs みたいにしない理由は、item 単位でコンポーネント化する方が design 調整しやすいから
 
 ### content
 
@@ -97,7 +109,7 @@ content の説明は除く
 - 共通 script
   - script はコンポーネントに書かないの？
 
-#### components
+### script/components
 
 - script の共通コンポーネント
 
@@ -106,14 +118,15 @@ content の説明は除く
 - 共通 style
 - 共通 style より、コンポーネントの style の方が上書きされる？
 
+### styles/content
+
+- content 管理の css
+
+### styles/pages
+
+- 各ページの css
+
 ## ファイル
-
-### src/components/Blogs.astro
-
-- このコンポーネントを使用しているファイル:
-  - src/pages/blog/index.astro
-  - src/pages/blog/tag/[tag].astro
-- blog コンテンツをループ処理
 
 ### src/components/Footer.astro
 
@@ -128,25 +141,36 @@ content の説明は除く
   - src/layouts/PageLayout.astro
 - 共通ヘッダー
 
-### src/components/Navs.astro
-
-- このコンポーネントを使用しているファイル:
-  - src/components/Header.astro
-- 各ページへの導線
-
-### src/components/Tags.astro
-
-- このコンポーネントを使用しているファイル:
-  - src/layouts/blogLayout.astro
-  - src/pages/blog/tag/index.astro
-- blog コンテンツのタグをループ処理
-
 ### src/components/Toc.astro
 
 - このコンポーネントを使用しているファイル:
   - src/layouts/BlogLayout.astro
 - blog コンテンツの 目次
   - 表示する深さは h5 まで
+
+### src/components/item/Blog.astro
+
+- このコンポーネントを使用しているファイル:
+  - src/pages/blog/index.astro
+  - src/pages/blog/tag/[tag].astro
+- blog の item
+- blog コンテンツをループ処理
+
+### src/components/item/Nav.astro
+
+- このコンポーネントを使用しているファイル:
+  - src/components/Header.astro
+- nav の item
+- 各ページへの導線
+
+### src/components/item/Tag.astro
+
+- このコンポーネントを使用しているファイル:
+  - src/components/item/Blog.astro
+  - src/layouts/blogLayout.astro
+  - src/pages/blog/tag/index.astro
+- tag の item
+- blog コンテンツのタグをループ処理
 
 ### src/layouts/BaseLayout.astro
 
@@ -200,13 +224,6 @@ content の説明は除く
 - URL: /blog/tag/
 - ブログタグ一覧ページ
 
-### src/script/components/adjustMainMargin.js
-
-- 使用している js
-  - src/script/global.js
-- なんとなくコンポーネント化
-- main の上部の余白を調整
-
 ### src/script/blog.js
 
 - blog ページの共通 js
@@ -214,3 +231,30 @@ content の説明は除く
 ### src/script/global.js
 
 - ページ全体で読み込む js
+
+### src/script/components/adjustMainMargin.js
+
+- 使用している js
+  - src/script/global.js
+- なんとなくコンポーネント化
+- main の上部の余白を調整
+
+### src/styles/global.css
+
+- 共通 css
+
+### src/styles/content/blog.css
+
+- content/blog の css
+
+### src/styles/pages/about.css
+
+- pages/about の css
+
+### src/styles/pages/blog.css
+
+- pages/blog の css
+
+### src/styles/pages/index.css
+
+- pages/index の css
