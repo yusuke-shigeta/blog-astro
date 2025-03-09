@@ -5,18 +5,20 @@ const { blogs } = Astro.props;
 ---
 
 {
-  blogs.map((blog) => (
-    <li class="blog">
-      <a class="blog-link" href={`/blog/${blog.slug}`}>
-        {blog.data.title}
-      </a>
-      {blog.data.update ? <p class="blog-update">更新日: {blog.data.update.toISOString().slice(0, 10)}</p> : <p class="blog-date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>}
-      <p class="blog-title">{blog.data.title}</p>
-      <ul class="tags">
-        <Tag tags={blog.data.tags} />
-      </ul>
-    </li>
-  ))
+  blogs
+    .filter((blog) => blog.data.status === "public")
+    .map((blog) => (
+      <li class="blog">
+        <a class="blog-link" href={`/blog/${blog.slug}`}>
+          {blog.data.title}
+        </a>
+        {blog.data.update ? <p class="blog-update">更新日: {blog.data.update.toISOString().slice(0, 10)}</p> : <p class="blog-date">投稿日: {blog.data.date.toISOString().slice(0, 10)}</p>}
+        <p class="blog-title">{blog.data.title}</p>
+        <ul class="tags">
+          <Tag tags={blog.data.tags} />
+        </ul>
+      </li>
+    ))
 }
 
 <style>

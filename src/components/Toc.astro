@@ -25,30 +25,37 @@ const updateHeadings = filteredHeadings.map((heading) => {
 
 <style>
   .tocs {
-    position: sticky;
-    height: 600px;
-    overflow: scroll;
-    list-style-type: none;
-    padding-left: 0;
+    display: none;
   }
 
-  .toc:hover .toc-link {
-    font-weight: bold;
-  }
+  @media screen and (min-width: 960px) {
+    .tocs {
+      position: sticky;
+      display: block;
+      height: 600px;
+      overflow: scroll;
+      list-style-type: none;
+      padding-left: 0;
+    }
 
-  .toc-link {
-    display: block;
-    padding: 2px 4px;
-    word-break: break-all;
-    color: rgb(0 0 0 / 60%);
-    font-size: 14px;
-    text-decoration: none;
-  }
+    .toc:hover .toc-link {
+      font-weight: bold;
+    }
 
-  .depth-3 {
-    margin: 0 0 0 10px;
-  }
-  .depth-4 {
-    margin: 0 0 0 20px;
+    .toc-link {
+      display: block;
+      padding: 2px 4px;
+      word-break: break-all;
+      color: rgb(0 0 0 / 60%);
+      font-size: 14px;
+      text-decoration: none;
+    }
+
+    .depth-3 {
+      margin: 0 0 0 10px;
+    }
+    .depth-4 {
+      margin: 0 0 0 20px;
+    }
   }
 </style>
