@@ -4,7 +4,8 @@ import { z, defineCollection } from 'astro:content';
 const blogCollection = defineCollection({
   type: 'content',
   schema: z.object({
-    status: z.string(),
+    // 1 == public, 2 == private
+    status: z.number(),
     date: z.date(),
     update: z.date().optional(),
     title: z.string(),
