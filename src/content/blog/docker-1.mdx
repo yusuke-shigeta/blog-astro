@@ -2,8 +2,8 @@
 status: 1
 date: 2025-03-11
 update: 2025-03-11
-title: "dockerが開けない"
-description: "dockerインストールしたけど開けないエラーについて"
+title: "Docker Desktopが開けない"
+description: "MacでDocker Desktopインストールしたけど開けないエラーについて"
 thumbnail: "astro_thumb.jpg"
 tags: ["docker", "error"]
 ---
@@ -22,7 +22,14 @@ docker 公式から Apple 用の Docker Desktop をインストールしたが�
 
 ## 解決策
 
-完全に Docker を削除するため、ターミナルで以下のコマンドを叩いた
+1. ターミナルで以下のコマンドを叩き、完全に Docker を削除
 
 `sudo rm -rf ~/.docker sudo rm -rf ~/Library/Containers/com.docker.docker sudo rm -rf ~/Library/Group\ Containers/group.com.docker sudo rm -rf ~/Library/Caches/com.docker.docker sudo rm -rf /Library/PrivilegedHelperTools/com.docker.vmnetd sudo rm -rf /Library/LaunchDaemons/com.docker.vmnetd.plist sudo rm -rf /usr/local/lib/docker sudo rm -rf ~/Library/Application\ Support/Docker\ Desktop sudo rm -rf ~/Library/Preferences/com.docker.docker.plist sudo rm -rf ~/Library/Saved\ Application\ State/com.electron.docker-frontend.savedState sudo rm -rf ~/Library/Group\ Containers/group.com.docker sudo rm -rf ~/Library/Logs/Docker\ Desktop sudo rm -rf ~/Library/Preferences/com.electron.docker-frontend.plist sudo rm -rf ~/Library/Cookies/com.docker.docker.binarycookies
 sudo rm -rf /Applications/Docker.app sudo rm -f /usr/local/bin/docker sudo rm -f /usr/local/bin/docker-machine sudo rm -f /usr/local/bin/com.docker.cli sudo rm -f /usr/local/bin/docker-compose sudo rm -f /usr/local/bin/docker-compose-v1 sudo rm -f /usr/local/bin/docker-credential-desktop sudo rm -f /usr/local/bin/docker-credential-ecr-login sudo rm -f /usr/local/bin/docker-credential-osxkeychain sudo rm -f /usr/local/bin/hub-tool sudo rm -f /usr/local/bin/hyperkit sudo rm -f /usr/local/bin/kubectl.docker sudo rm -f /usr/local/bin/vpnkit sudo rm -f /usr/local/lib/docker`
+
+2. docker 公式から最新の Docker Desktop をダウンロード
+
+   - [docker 公式](https://matsuand.github.io/docs.docker.jp.onthefly/desktop/mac/install/)
+
+3. Dcoker Desktop 開いて動作確認
+4. とりあえず問題なく開けたので OK
