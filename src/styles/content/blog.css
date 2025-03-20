@@ -95,3 +95,19 @@ code {
 .blog-contents > *:first-child {
   margin-top: 0;
 }
+
+.blog-contents ul.depth-0 {
+  margin: 24px 0;
+}
+
+.blog-contents ul.depth-0 > li:nth-child(n+2) {
+  margin: 14px 0 0;
+}
+
+.blog-contents ol.depth-0 {
+  margin: 24px 0;
+}
+
+.blog-contents ol.depth-0 > li:nth-child(n+2){
+  margin: 14px 0 0;
+}
