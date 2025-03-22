@@ -94,7 +94,8 @@ Q25-002 での行った変更をリモートリポジトリにプッシュして
 - vscode で 「Source Control」 を開く方法は？
   - ショートカット: `Ctrl + Shift G`
 - 新規ブランチの作成方法は？
-  - test
+  - `git branch`コマンドを使用。
+  - 今回は `git branch yamaguchi-Q25002`
 - ブランチを切り替える方法は？
   - `git checkout`コマンドを使用。以下が基本構文。
     - `git checkout <ブランチ名>`
