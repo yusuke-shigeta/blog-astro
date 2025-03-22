@@ -1,0 +1,76 @@
+---
+status: 1
+date: 2025-03-22
+update: 2025-03-22
+title: "Dockerで同じような環境を作成したい時の注意点"
+description: "注意点を一部まとめ"
+thumbnail: "astro_thumb.jpg"
+tags: ["docker"]
+---
+
+## 同じような環境を作成したい場合の注意点
+
+### 注意点 1: 別のポート番号を使う
+
+**理由:**
+
+- ローカル環境では「同じポート番号は同時に使えない」から
+  - ポートで管理したくないのであれば、「仮想ドメイン」で分ける方法もある
+
+### 注意点 2: データのボリューム名を変える
+
+**理由:**
+
+- ボリューム名の重複を防ぐため
+  - 複数のプロジェクトで同じボリューム名を使うと、上書きされたり、データが混在するリスクがある
+- プロジェクトの独立性を保つため
+  - ボリューム名をプロジェクトごとにユニークにしておくことで、それぞれのプロジェクトが他に影響されずに動作する
+- 削除やバックアップ・復元を簡単にするため
+  - 複数プロジェクトがある中で、あるプロジェクトだけのデータを操作したい時に、名前で判別しやすくすることが重要
+- CI/CD や自動化で予期せぬ干渉を防ぐ
+  - 同じホスト上で複数のパイプラインが走っている場合、同名のボリュームを使ってしまうと、テスト結果や状態が壊れるリスクがある
+
+### 注意点 3: サービス名や DB 名も分ける
+
+**理由**
+
+- 名前の衝突（コンフリクト）を防ぐため
+  - 同じサービス名や DB 名があると、内部ネットワーク名やホスト名が衝突する可能性がある
+    - プロジェクト A も B もサービス名を db にしていると、同時に起動した際にネットワーク名がかぶって通信がおかしくなることがある
+
+## 例
+
+```yml
+version: "3.8"
+
+services:
+  wordpress2: # 別サービス名
+    image: wordpress:latest
+    ports:
+      - "8082:80" # 別ポート
+    environment:
+      WORDPRESS_DB_HOST: db2
+      WORDPRESS_DB_NAME: wordpress2
+      WORDPRESS_DB_USER: wordpress2
+      WORDPRESS_DB_PASSWORD: wordpress2
+    volumes:
+      - ./wp2-data:/var/www/html # 別volumes名
+
+  db2:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: wordpress2
+      MYSQL_USER: wordpress2
+      MYSQL_PASSWORD: wordpress2
+      MYSQL_ROOT_PASSWORD: root
+    volumes:
+      - ./db2-data:/var/lib/mysql # 別volumes名
+
+  phpmyadmin2: # 別サービス名
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - "8083:80" # 別ポート
+    environment:
+      PMA_HOST: db2
+      MYSQL_ROOT_PASSWORD: root
+```
