@@ -9,7 +9,7 @@ const { blog, headings } = Astro.props;
 const pageTitle = "Blog";
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={blog.data.title} pageDescription={blog.data.description}>
   <Header pageTitle={pageTitle} />
   <main class="main">
     <div class="blog">

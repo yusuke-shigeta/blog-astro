@@ -1,7 +1,7 @@
 ---
 import "../styles/global.css";
 
-const { pageTitle, mainColor } = Astro.props;
+const { pageTitle, pageDescription, mainColor } = Astro.props;
 ---
 
 <html lang="ja">
@@ -11,6 +11,7 @@ const { pageTitle, mainColor } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
   </head>
   <body>
     <slot />

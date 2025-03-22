@@ -3,7 +3,7 @@ status: 1
 date: 2025-03-21
 update: 2025-03-21
 title: "勉強"
-description: ""
+description: "gitの設定やってみる"
 thumbnail: "astro_thumb.jpg"
 tags: ["study"]
 ---
@@ -14,7 +14,7 @@ tags: ["study"]
 | 03/20 | [Q25002](#q25002) |
 | 03/20 | [Q25003](#q25003) |
 
-## questions
+## Questions
 
 ### Q25001
 
